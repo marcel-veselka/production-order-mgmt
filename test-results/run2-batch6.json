@@ -1,0 +1,152 @@
+[
+  {
+    "tc": "TC126",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "Kanban board at /workflows loads with all 7 columns: Draft, Submitted, Approved, In Production, Quality Check, Quality Hold, Completed"
+  },
+  {
+    "tc": "TC127",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Column headers show order counts in span.kanban-count badges (e.g. Draft:3, Submitted:2, Approved:2, In Production:3, Quality Check:2, Quality Hold:1, Completed:2)"
+  },
+  {
+    "tc": "TC128",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Cards display order numbers (ORD-015, ORD-014, etc.) in card header"
+  },
+  {
+    "tc": "TC129",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Cards display product names (Precision Bearing Unit, Hydraulic Seal Kit, Steel Bracket A, etc.)"
+  },
+  {
+    "tc": "TC130",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Cards display priority badges: low, medium, high, critical"
+  },
+  {
+    "tc": "TC131",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Cards display quantity (e.g. Qty: 75, Qty: 600, Qty: 800)"
+  },
+  {
+    "tc": "TC132",
+    "status": "FAIL",
+    "duration_ms": 1500,
+    "notes": "Cards show user IDs (USR-005, USR-003, USR-004) instead of user names. API returns assignedToName (e.g. Eva Kralova) but kanban cards display assignedTo ID"
+  },
+  {
+    "tc": "TC133",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "POST /api/orders/ORD-015/transition {action:submit} returned 200, status changed from draft to submitted"
+  },
+  {
+    "tc": "TC134",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "POST /api/orders/ORD-015/transition {action:approve} as Admin returned 200, status changed from submitted to approved"
+  },
+  {
+    "tc": "TC135",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "POST /api/orders/ORD-012/transition {action:approve} with Supervisor token (USR-002) returned 200, status changed from submitted to approved"
+  },
+  {
+    "tc": "TC136",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "POST /api/orders/ORD-012/transition {action:reject} as Admin returned 200, status changed from submitted to draft"
+  },
+  {
+    "tc": "TC137",
+    "status": "PASS",
+    "duration_ms": 1900,
+    "notes": "POST /api/orders/ORD-011/transition {action:reject} with Supervisor token (USR-002) returned 200, status changed from submitted to draft"
+  },
+  {
+    "tc": "TC138",
+    "status": "PASS",
+    "duration_ms": 1700,
+    "notes": "POST /api/orders/ORD-015/transition {action:start_production} returned 200, status changed from approved to in_production"
+  },
+  {
+    "tc": "TC139",
+    "status": "PASS",
+    "duration_ms": 2200,
+    "notes": "POST /api/orders/ORD-015/transition {action:complete_production} with Operator token (USR-003) returned 200, status changed from in_production to quality_check"
+  },
+  {
+    "tc": "TC140",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "POST /api/orders/ORD-007/transition {action:complete} as Admin returned 200, status changed from quality_check to completed"
+  },
+  {
+    "tc": "TC141",
+    "status": "PASS",
+    "duration_ms": 1700,
+    "notes": "POST /api/orders/ORD-007/transition {action:quality_hold} returned 200, status changed from quality_check to quality_hold"
+  },
+  {
+    "tc": "TC142",
+    "status": "PASS",
+    "duration_ms": 1600,
+    "notes": "POST /api/orders/ORD-007/transition {action:release_hold} returned 200, status changed from quality_hold to quality_check"
+  },
+  {
+    "tc": "TC143",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-011/transition {action:approve} from draft returned 400: Cannot approve from status draft. Valid from: submitted"
+  },
+  {
+    "tc": "TC144",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-011/transition {action:start_production} from draft returned 400: Cannot start_production from status draft. Valid from: approved"
+  },
+  {
+    "tc": "TC145",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-011/transition {action:complete} from draft returned 400: Cannot complete from status draft. Valid from: quality_check"
+  },
+  {
+    "tc": "TC146",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-011/transition {action:start_production} from submitted returned 400: Cannot start_production from status submitted. Valid from: approved"
+  },
+  {
+    "tc": "TC147",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-012/transition {action:complete} from approved returned 400: Cannot complete from status approved. Valid from: quality_check"
+  },
+  {
+    "tc": "TC148",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-005/transition {action:complete} from in_production returned 400: Cannot complete from status in_production. Valid from: quality_check"
+  },
+  {
+    "tc": "TC149",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "POST /api/orders/ORD-008/transition {action:complete} from quality_hold returned 400: Cannot complete from status quality_hold. Valid from: quality_check"
+  },
+  {
+    "tc": "TC150",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "Completed order ORD-001: API rejects all transitions (submit, start_production, approve) with 400. UI shows 'No actions available for this status' on detail page. Kanban cards have no draggable attribute."
+  }
+]

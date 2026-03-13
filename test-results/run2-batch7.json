@@ -1,0 +1,152 @@
+[
+  {
+    "tc": "TC151",
+    "status": "FAIL",
+    "duration_ms": 800,
+    "notes": "CSS class kanban-column-drop-valid exists in App.css source (green bg #d4edda) but is missing from production CSS bundle. React applies the class on valid drop but no visual effect in built app."
+  },
+  {
+    "tc": "TC152",
+    "status": "FAIL",
+    "duration_ms": 800,
+    "notes": "CSS class kanban-column-drop-invalid exists in App.css source (red bg #fde8e8) but is missing from production CSS bundle. React applies the class on invalid drop but no visual effect in built app."
+  },
+  {
+    "tc": "TC153",
+    "status": "FAIL",
+    "duration_ms": 800,
+    "notes": "CSS class kanban-column-droppable exists in App.css source (blue dashed border #4361ee44) but is missing from production CSS bundle. React applies the class during drag but no visual effect in built app."
+  },
+  {
+    "tc": "TC154",
+    "status": "PASS",
+    "duration_ms": 11,
+    "notes": "Operator got 403 on approve action. API returns: Role 'operator' cannot perform 'approve'"
+  },
+  {
+    "tc": "TC155",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Operator got 403 on reject action. API returns: Role 'operator' cannot perform 'reject'"
+  },
+  {
+    "tc": "TC156",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Operator got 403 on start_production action. API returns: Role 'operator' cannot perform 'start_production'"
+  },
+  {
+    "tc": "TC157",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Operator got 403 on quality_hold action. API returns: Role 'operator' cannot perform 'quality_hold'"
+  },
+  {
+    "tc": "TC158",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Operator got 403 on complete action. API returns: Role 'operator' cannot perform 'complete'"
+  },
+  {
+    "tc": "TC159",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Submit action on ORD-014 (draft->submitted) returned 200. Admin can submit."
+  },
+  {
+    "tc": "TC160",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Admin approve on ORD-014 (submitted->approved) returned 200."
+  },
+  {
+    "tc": "TC161",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Supervisor approve on ORD-013 (submitted->approved) returned 200."
+  },
+  {
+    "tc": "TC162",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Admin reject on ORD-011 (submitted->draft) returned 200."
+  },
+  {
+    "tc": "TC163",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Supervisor reject on ORD-011 (submitted->draft) returned 200."
+  },
+  {
+    "tc": "TC164",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Start production on ORD-014 (approved->in_production) returned 200."
+  },
+  {
+    "tc": "TC165",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Operator complete_production on ORD-014 (in_production->quality_check) returned 200. Operator role is allowed."
+  },
+  {
+    "tc": "TC166",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Quality hold on ORD-014 (quality_check->quality_hold) returned 200."
+  },
+  {
+    "tc": "TC167",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Release hold on ORD-014 (quality_hold->quality_check) returned 200."
+  },
+  {
+    "tc": "TC168",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "Mark complete on ORD-014 (quality_check->completed) returned 200."
+  },
+  {
+    "tc": "TC169",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "Logged in as Operator, navigated to submitted ORD-011 detail page. Actions section shows 'No actions available for this status' - no Approve/Reject buttons visible."
+  },
+  {
+    "tc": "TC170",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "Logged in as Supervisor, navigated to submitted ORD-011 detail page. Actions section shows Approve and Reject buttons."
+  },
+  {
+    "tc": "TC171",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "Logged in as Admin, navigated to submitted ORD-011 detail page. Actions section shows Approve and Reject buttons. Code analysis confirms Admin gets all action buttons at every status."
+  },
+  {
+    "tc": "TC172",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "Clicked Approve on ORD-011 detail page, then verified on workflows board that ORD-011 moved from Submitted to Approved column. Card appears immediately in target column (optimistic update via setOrders state)."
+  },
+  {
+    "tc": "TC173",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "Skipped per test plan - rollback on API failure is hard to simulate without mocking network."
+  },
+  {
+    "tc": "TC174",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "After approving ORD-011, Submitted column count changed from 2 to 0 and Approved from 3 to 4. Column counts correctly reflect card movements."
+  },
+  {
+    "tc": "TC175",
+    "status": "PASS",
+    "duration_ms": 22,
+    "notes": "Created ORD-018 and walked through full lifecycle: draft->submitted->approved->in_production->quality_check->quality_hold->quality_check->completed. All 7 transitions succeeded. Includes quality_hold detour."
+  }
+]

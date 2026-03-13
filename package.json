@@ -1,0 +1,17 @@
+{
+  "name": "production-order-mgmt",
+  "version": "1.0.0",
+  "description": "Factory MES - Production Order Management demo app for AI testing agents",
+  "private": true,
+  "scripts": {
+    "docker:build": "docker build -t factory-mes .",
+    "docker:run": "docker run -d --name factory-mes -p 3333:3000 factory-mes",
+    "docker:stop": "docker rm -f factory-mes",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "dev": "docker compose --profile dev up",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": ["demo", "testing", "manufacturing", "mes"],
+  "license": "MIT"
+}
