@@ -1,0 +1,205 @@
+[
+  {
+    "tc": "TC076",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "Search 'ORD-001' returned exactly 1 matching result with correct order data. Pagination showed '1-1 of 1'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC077",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "Search 'ORD-' returned filtered results (10 rows on first page), confirming partial search works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC078",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "Search 'NONEXISTENT' showed empty state: 'No orders found' message with 'Showing 0-0 of 0'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC079",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "After clearing search field, all orders restored. Pagination showed full count.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC080",
+    "status": "PASS",
+    "duration_ms": 2200,
+    "notes": "New Order button navigated to /orders/new with wizard step 1 (Product Details) loaded. Step indicators (1, 2, 3) visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC081",
+    "status": "PASS",
+    "duration_ms": 18500,
+    "notes": "Admin transitioned ORD-014 Draft->Submitted->Approved->In Production via detail page actions. Dashboard 'In Production' KPI increased from 3 to 4.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC082",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Step 1 product dropdown contains 6 products: Steel Bracket A, Aluminum Frame B, Hydraulic Seal Kit, Copper Wire Harness, Polymer Coating Mix, Precision Bearing Unit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC083",
+    "status": "PASS",
+    "duration_ms": 12400,
+    "notes": "Admin created ORD-023 via wizard (Polymer Coating Mix, qty 200, CNC Machining Center). Dashboard Recent Orders table contains ORD-023 with Draft status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC084",
+    "status": "PASS",
+    "duration_ms": 10300,
+    "notes": "Admin started production on ORD-016 (Approved->In Production). Dashboard activity feed shows 'start_production: approved -> in_production' as most recent entry with timestamp.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC085",
+    "status": "FAIL",
+    "duration_ms": 15200,
+    "notes": "Operator Dashboard shows 'No recent orders' in Recent Orders table - table is empty so clicking a row is impossible. All KPIs show 0. Dashboard appears to filter by user/role showing no data for Operator. Order detail works when navigated directly.",
+    "attempts": 3,
+    "retries": [
+      {"attempt": 2, "result": "FAIL", "notes": "Created order as Operator, Dashboard still shows 'No recent orders'"},
+      {"attempt": 3, "result": "FAIL", "notes": "Same behavior - Operator Dashboard consistently empty"}
+    ]
+  },
+  {
+    "tc": "TC086",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Clicking Next with empty fields showed validation errors: 'Product is required', 'Valid quantity is required', 'Due date is required'. Priority had default value (Medium) so no error.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC087",
+    "status": "PASS",
+    "duration_ms": 22100,
+    "notes": "Admin created ORD-030, searched by order number, opened detail, submitted (Draft->Submitted). Navigated back to grid, searched again - order shows 'Submitted' status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC088",
+    "status": "PASS",
+    "duration_ms": 12800,
+    "notes": "Operator filtered Orders by 'In Production' showing 7 rows (Showing 1-7 of 7). Kanban 'In Production' column count also shows '7'. Counts match.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC089",
+    "status": "PASS",
+    "duration_ms": 14500,
+    "notes": "Admin filtered by Draft, selected all, exported CSV. File 'orders-2026-03-15.csv' downloaded with correct columns (Order #, Product, Quantity, Status, Priority, Assigned To, Due Date) containing only Draft orders.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC090",
+    "status": "PASS",
+    "duration_ms": 3800,
+    "notes": "Filled Step 1 (product, quantity, priority, due date), clicked Next. Step 2 (Production Parameters) loaded with checkmark on Step 1 indicator.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC091",
+    "status": "PASS",
+    "duration_ms": 1000,
+    "notes": "Step 2 Production Line dropdown lists 4 lines: Assembly Line Alpha, CNC Machining Center, Coating Station, Quality Lab.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC092",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Clicking Next without selecting production line showed validation error: 'Production line is required'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC093",
+    "status": "PASS",
+    "duration_ms": 28500,
+    "notes": "Operator navigated to /settings, was redirected to Dashboard (/). Then created order via wizard, submitted it successfully. Full functionality despite earlier denied Settings access.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC094",
+    "status": "PASS",
+    "duration_ms": 25200,
+    "notes": "Admin navigated Dashboard->Orders->New Order (completed wizard)->Order Detail->Workflows->Settings->Dashboard. No re-login required at any point, 'Admin' context persisted in header throughout.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC095",
+    "status": "PASS",
+    "duration_ms": 8500,
+    "notes": "Admin navigated to Settings->Production Lines, clicked Logout. Login form rendered (URL stayed at /settings but login page displayed). Token removed from localStorage.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC096",
+    "status": "PASS",
+    "duration_ms": 12300,
+    "notes": "Operator logged in, localStorage cleared (simulating corruption). Navigating to /orders showed login page. Re-login as Operator succeeded, Dashboard loaded with full functionality.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC097",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "Filled Step 2 (production line, shift, notes), clicked Next. Step 3 (Review & Submit) loaded with checkmarks on Steps 1 and 2.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC098",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Review summary on Step 3 showed all entered data: Product=Steel Bracket A, Quantity=100, Priority=High, Due Date=4/15/2026, Production Line=Assembly Line Alpha, Shift=Afternoon, Notes=S1G4 test notes for stability.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC099",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "Navigated back from Step 2 to Step 1. All fields preserved: Product=Steel Bracket A (selected), Quantity=100, Priority=High (selected), Due Date=2026-04-15.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC100",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Navigated back from Step 3 to Step 2. All fields preserved: Production Line=Assembly Line Alpha (selected), Shift=Afternoon (selected), Notes=S1G4 test notes for stability (29/500 chars).",
+    "attempts": 1,
+    "retries": []
+  }
+]

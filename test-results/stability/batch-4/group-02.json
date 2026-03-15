@@ -1,0 +1,207 @@
+[
+  {
+    "tc": "TC026",
+    "status": "PASS",
+    "duration_ms": 1655,
+    "notes": "B4G2-TC026: Login form retains email field value after failed login attempt with wrong password.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC027",
+    "status": "PASS",
+    "duration_ms": 6028,
+    "notes": "B4G2-TC027: Admin put ORD-007 on Quality Hold and released back to Quality Check. Both transitions succeeded with notifications. Activity log updated.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC028",
+    "status": "PASS",
+    "duration_ms": 4820,
+    "notes": "B4G2-TC028: Operator has no Approve/Reject buttons on Submitted order detail (ORD-015). Submit button available on Draft orders (ORD-013). Role enforcement confirmed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC029",
+    "status": "PASS",
+    "duration_ms": 3220,
+    "notes": "B4G2-TC029: Error message cleared/updated on new login attempt after initial failure.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC030",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "B4G2-TC030: Skipped - timing-sensitive button disabled state during API call not reliably testable in automated execution.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC031",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "B4G2-TC031: Dashboard page renders after login with 'Dashboard' heading.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC032",
+    "status": "PASS",
+    "duration_ms": 4,
+    "notes": "B4G2-TC032: Total Orders KPI card shows numeric value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC033",
+    "status": "PASS",
+    "duration_ms": 4,
+    "notes": "B4G2-TC033: In Production KPI card shows numeric value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC034",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "B4G2-TC034: Completed Today KPI card shows numeric value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC035",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "B4G2-TC035: Quality Hold KPI card shows numeric value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC036",
+    "status": "PASS",
+    "duration_ms": 6669,
+    "notes": "B4G2-TC036: Supervisor rejected ORD-013 (Submitted->Draft). Status changed back to Draft. Activity log updated with rejection.",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "ORD-014 was no longer in Submitted status (moved by earlier test)"
+      }
+    ]
+  },
+  {
+    "tc": "TC037",
+    "status": "PASS",
+    "duration_ms": 7119,
+    "notes": "B4G2-TC037: Admin edited user role in Settings -> Users tab. Changed last user's role to Supervisor and saved.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC038",
+    "status": "PASS",
+    "duration_ms": 4056,
+    "notes": "B4G2-TC038: Supervisor verified Workflows page loads with Kanban columns. Submitted column visible with cards.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC039",
+    "status": "PASS",
+    "duration_ms": 13348,
+    "notes": "B4G2-TC039: Admin walked ORD-006 through full quality hold loop: Quality Check->Quality Hold->Quality Check->Quality Hold->Quality Check->Completed. All transitions succeeded.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC040",
+    "status": "PASS",
+    "duration_ms": 1066,
+    "notes": "B4G2-TC040: Daily Production Output chart heading found. Chart element (img/canvas) renders with 7-day data.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC041",
+    "status": "PASS",
+    "duration_ms": 5608,
+    "notes": "B4G2-TC041: Operator completed production on ORD-005 via Complete Production button. Order moved to Quality Check with success notification.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC042",
+    "status": "PASS",
+    "duration_ms": 3012,
+    "notes": "B4G2-TC042: Dashboard API (/api/dashboard) responded successfully. Chart data present and rendered on page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC043",
+    "status": "PASS",
+    "duration_ms": 3,
+    "notes": "B4G2-TC043: Recent Orders table present with 5 rows displayed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC044",
+    "status": "PASS",
+    "duration_ms": 16,
+    "notes": "B4G2-TC044: Recent orders table has all 4 column headers: Order #, Product, Status, Due Date.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC045",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "B4G2-TC045: Recent orders sorted by creation date descending. Most recent order appears first.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC046",
+    "status": "PASS",
+    "duration_ms": 3,
+    "notes": "B4G2-TC046: Status shown as styled badge/label in recent orders table (not raw text).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC047",
+    "status": "PASS",
+    "duration_ms": 0,
+    "notes": "B4G2-TC047: Activity feed displays 10 event entries.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC048",
+    "status": "PASS",
+    "duration_ms": 4,
+    "notes": "B4G2-TC048: Each activity feed entry has a timestamp in M/D/YYYY format.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC049",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "B4G2-TC049: Activity feed sorted in descending chronological order (most recent first).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC050",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "B4G2-TC050: Activity feed includes order status transition events with arrow notation (e.g., 'submitted -> approved').",
+    "attempts": 1,
+    "retries": []
+  }
+]

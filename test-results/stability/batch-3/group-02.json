@@ -1,0 +1,207 @@
+[
+  {
+    "tc": "TC026",
+    "status": "PASS",
+    "duration_ms": 8200,
+    "notes": "S3G2-TC026: Submitted wrong password, email field retained 'admin@factory.local'. Error alert 'Login failed' displayed correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC027",
+    "status": "PASS",
+    "duration_ms": 22500,
+    "notes": "S3G2-TC027: Admin put ORD-007 on Quality Hold via detail page action button, status changed to quality_hold. Released back via Release button, status returned to quality_check. Activity log recorded both transitions with USR-001 (Admin) attribution and timestamps.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC028",
+    "status": "PASS",
+    "duration_ms": 18300,
+    "notes": "S3G2-TC028: Operator attempted approve on ORD-014 via API, got 403 'Role operator cannot perform approve'. Then submitted ORD-018 (Draft->Submitted), got 200 success. Role enforcement verified for both reject and allow paths.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC029",
+    "status": "PASS",
+    "duration_ms": 7500,
+    "notes": "S3G2-TC029: After failed login attempt showing 'Login failed' alert, corrected password and resubmitted. Error cleared and redirected to Dashboard successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC030",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "S3G2-TC030: Login button disabled state during API call is timing-dependent and not reliably testable in headless automation. Skipped per test plan.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC031",
+    "status": "PASS",
+    "duration_ms": 5200,
+    "notes": "S3G2-TC031: Dashboard page rendered after Admin login. Heading 'Dashboard' visible, KPI cards, chart, recent orders table, and activity feed all present.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC032",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "S3G2-TC032: 'Total Orders' KPI card shows numeric value (16). Value matches /api/dashboard response totalOrders field.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC033",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "S3G2-TC033: 'In Production' KPI card shows '3'. Matches API dashboard summary inProduction value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC034",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "S3G2-TC034: 'Completed Today' KPI card shows '0'. Matches API dashboard summary completedToday value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC035",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "S3G2-TC035: 'Quality Hold' KPI card shows '1'. Matches API dashboard summary qualityHold value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC036",
+    "status": "PASS",
+    "duration_ms": 19800,
+    "notes": "S3G2-TC036: Supervisor rejected ORD-017 from Submitted back to Draft via API transition. Verified on detail page: status shows 'Draft', activity log shows 'Status changed from submitted to draft' by USR-002 (Supervisor) with timestamp.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC037",
+    "status": "PASS",
+    "duration_ms": 15600,
+    "notes": "S3G2-TC037: Admin edited Tomas Dvorak (operator) in Settings > Users. Changed role to supervisor via dropdown, saved. Table confirmed updated role as 'supervisor'. Reverted to operator after test.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC038",
+    "status": "PASS",
+    "duration_ms": 21200,
+    "notes": "S3G2-TC038: Supervisor batch-approved 2 submitted orders (ORD-017, ORD-020) in sequence, both returned 200. ORD-013 was already approved from prior batch. Approved column count increased accordingly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC039",
+    "status": "PASS",
+    "duration_ms": 24500,
+    "notes": "S3G2-TC039: Admin walked ORD-007 through full quality hold loop: quality_check->quality_hold->quality_check->quality_hold->quality_check->completed. All 5 transitions returned 200. Order reached Completed status with full hold loop in activity trail.",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Used incorrect 'release' action name. Discovered correct action is 'release_hold'. Retried with correct action names."
+      }
+    ]
+  },
+  {
+    "tc": "TC040",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "S3G2-TC040: 'Daily Production Output' bar chart rendered with 7 date labels (2026-03-09 through 2026-03-15) corresponding to last 7 days.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC041",
+    "status": "PASS",
+    "duration_ms": 16800,
+    "notes": "S3G2-TC041: Logged in as Operator. Opened ORD-005 detail (In Production). Clicked 'Complete Production' action button. Status updated to 'Quality Check'. Activity log recorded the transition.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC042",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "S3G2-TC042: Fetched /api/dashboard with auth token. chartData array contains 7 entries matching the 7 bars displayed. KPI values (totalOrders=16, inProduction=3, completedToday=0, qualityHold=1) match displayed card values after page reload.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC043",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "S3G2-TC043: Recent Orders table contains exactly 5 rows (ORD-016, ORD-015, ORD-012, ORD-007, ORD-006) in the table body.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC044",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G2-TC044: Recent Orders table has 4 column headers: 'Order #', 'Product', 'Status', 'Due Date'. All present in the columnheader elements.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC045",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "S3G2-TC045: Recent orders sorted by creation date descending. Most recent order (ORD-016) appears first, followed by ORD-015, ORD-012, ORD-007, ORD-006.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC046",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "S3G2-TC046: Status values rendered as styled badge elements (generic elements with status text like 'Submitted', 'Quality Check', 'Draft'), not raw database values.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC047",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "S3G2-TC047: Activity feed rendered with 10 listitem entries. Events include submit, created, approve, quality_hold, complete_production, start_production actions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC048",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G2-TC048: Each activity feed entry has a timestamp in format 'M/D/YYYY, H:MM:SS AM/PM' (e.g., '3/15/2026, 1:48:52 PM').",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC049",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G2-TC049: Activity feed sorted most recent first. First entry timestamp (3/15/2026 1:48:52 PM) is more recent than last entry (3/8/2026 8:00:00 AM). Descending chronological order verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC050",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G2-TC050: Activity feed contains status change events: 'submit: draft -> submitted', 'approve: submitted -> approved', 'quality_hold: quality_check -> quality_hold', 'complete_production: in_production -> quality_check', 'start_production: approved -> in_production'.",
+    "attempts": 1,
+    "retries": []
+  }
+]

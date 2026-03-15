@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC201",
+    "status": "PASS",
+    "duration_ms": 3400,
+    "notes": "S3G9-TC201: Submit without name, 'Save failed' error shown correctly",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC202",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "S3G9-TC202: Submit without email, 'Save failed' error shown correctly",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC203",
+    "status": "PASS",
+    "duration_ms": 18500,
+    "notes": "S3G9-TC203: Switched Production Lines->Products->Users->Production Lines. Created line and product, both persisted across tab switches. Users table loaded correctly after switching back.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC204",
+    "status": "PASS",
+    "duration_ms": 1575,
+    "notes": "S3G9-TC204: Created user with all fields (name, email, role=operator, password). 'Created successfully' toast shown, user appeared in table.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC205",
+    "status": "PASS",
+    "duration_ms": 1930,
+    "notes": "S3G9-TC205: Duplicate email admin@factory.local rejected with 'Save failed' error. Note: error message is generic 'Save failed' rather than specific 'Email already in use'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC206",
+    "status": "PASS",
+    "duration_ms": 529,
+    "notes": "S3G9-TC206: Edit form pre-filled with correct values (name='S3G9-NewUser', email='s3g9-newuser@factory.local')",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC207",
+    "status": "PASS",
+    "duration_ms": 1051,
+    "notes": "S3G9-TC207: Changed name to 'S3G9-EditedUser', 'Updated successfully' toast shown, changes persisted in table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC208",
+    "status": "PASS",
+    "duration_ms": 520,
+    "notes": "S3G9-TC208: Delete button shows confirmation dialog with 'Confirm delete' and 'Cancel delete' buttons",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC209",
+    "status": "PASS",
+    "duration_ms": 1568,
+    "notes": "S3G9-TC209: Confirmed deletion, user removed from table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC210",
+    "status": "PASS",
+    "duration_ms": 531,
+    "notes": "S3G9-TC210: Cancelled delete dialog, user preserved in table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC211",
+    "status": "PASS",
+    "duration_ms": 537,
+    "notes": "S3G9-TC211: Production Lines table renders with data rows",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC212",
+    "status": "PASS",
+    "duration_ms": 8200,
+    "notes": "S3G9-TC212: Renamed line to 'S3G9-RenamedLine'. Navigated to New Order wizard Step 2, renamed line appeared in Production Line dropdown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC213",
+    "status": "PASS",
+    "duration_ms": 540,
+    "notes": "S3G9-TC213: 4 seed production lines verified (Assembly Line Alpha, CNC Machining Center, Coating Station, Quality Lab). 5 total rows including 1 test artifact.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC214",
+    "status": "PASS",
+    "duration_ms": 1067,
+    "notes": "S3G9-TC214: Created production line with name, location, status=active, capacity=200. 'Created successfully' toast shown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC215",
+    "status": "PASS",
+    "duration_ms": 1569,
+    "notes": "S3G9-TC215: Submitted empty production line form, 'Save failed' error shown",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC216",
+    "status": "PASS",
+    "duration_ms": 1575,
+    "notes": "S3G9-TC216: Edit form pre-filled correctly, modified name, saved. 'Updated successfully' shown, changes persisted.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC217",
+    "status": "PASS",
+    "duration_ms": 1565,
+    "notes": "S3G9-TC217: Confirmed production line deletion, line removed from table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC218",
+    "status": "PASS",
+    "duration_ms": 1066,
+    "notes": "S3G9-TC218: Cancelled production line delete, line preserved in table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC219",
+    "status": "PASS",
+    "duration_ms": 536,
+    "notes": "S3G9-TC219: Products table renders with data rows",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC220",
+    "status": "PASS",
+    "duration_ms": 3826,
+    "notes": "S3G9-TC220: Renamed product to 'S3G9-RenamedProduct'. Navigated to New Order wizard Step 1, renamed product appeared in Product dropdown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC221",
+    "status": "PASS",
+    "duration_ms": 540,
+    "notes": "S3G9-TC221: 6 seed products verified (Steel Bracket A, Aluminum Frame B, Hydraulic Seal Kit, Copper Wire Harness, Polymer Coating Mix, Precision Bearing Unit). Note: Precision Bearing Unit not in wizard dropdown but present in Products table.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC222",
+    "status": "PASS",
+    "duration_ms": 1061,
+    "notes": "S3G9-TC222: Created product with name, category=Electronics, unit=pcs. 'Created successfully' toast shown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC223",
+    "status": "PASS",
+    "duration_ms": 1571,
+    "notes": "S3G9-TC223: Submitted empty product form, 'Save failed' error shown",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC224",
+    "status": "PASS",
+    "duration_ms": 2670,
+    "notes": "S3G9-TC224: Created product with name='S3G9-PersistProduct', category='Metals', unit='kg'. Switched to Users tab and back to Products. Product persisted with correct unit and category values.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC225",
+    "status": "PASS",
+    "duration_ms": 1589,
+    "notes": "S3G9-TC225: Edit form pre-filled correctly, modified product name, saved. 'Updated successfully' shown, changes persisted.",
+    "attempts": 1,
+    "retries": []
+  }
+]

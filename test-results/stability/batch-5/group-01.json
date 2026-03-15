@@ -1,0 +1,220 @@
+[
+  {
+    "tc": "TC001",
+    "status": "PASS",
+    "duration_ms": 6971,
+    "notes": "B5G1-TC001: Admin login -> Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC002",
+    "status": "PASS",
+    "duration_ms": 6908,
+    "notes": "B5G1-TC002: Supervisor login -> Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC003",
+    "status": "PASS",
+    "duration_ms": 6893,
+    "notes": "B5G1-TC003: Operator login -> Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC004",
+    "status": "PASS",
+    "duration_ms": 6900,
+    "notes": "B5G1-TC004: Invalid email shows error, stays on login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC005",
+    "status": "PASS",
+    "duration_ms": 6886,
+    "notes": "B5G1-TC005: Wrong password shows error message.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC006",
+    "status": "PASS",
+    "duration_ms": 4276,
+    "notes": "B5G1-TC006: Empty email shows validation error.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC007",
+    "status": "PASS",
+    "duration_ms": 4306,
+    "notes": "B5G1-TC007: Empty password shows validation error.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC008",
+    "status": "PASS",
+    "duration_ms": 3220,
+    "notes": "B5G1-TC008: Both empty, stays on login page with validation errors.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC009",
+    "status": "PASS",
+    "duration_ms": 6421,
+    "notes": "B5G1-TC009: Admin demo button fills creds, login succeeds.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC010",
+    "status": "PASS",
+    "duration_ms": 6438,
+    "notes": "B5G1-TC010: Supervisor demo button fills creds, login succeeds.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC011",
+    "status": "PASS",
+    "duration_ms": 6410,
+    "notes": "B5G1-TC011: Operator demo button fills creds, login succeeds.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC012",
+    "status": "PASS",
+    "duration_ms": 51,
+    "notes": "B5G1-TC012: Auth token exists in localStorage.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC013",
+    "status": "PASS",
+    "duration_ms": 48,
+    "notes": "B5G1-TC013: Token is non-empty base64 value.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC014",
+    "status": "PASS",
+    "duration_ms": 1171,
+    "notes": "B5G1-TC014: Session persists on page refresh.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC015",
+    "status": "PASS",
+    "duration_ms": 1217,
+    "notes": "B5G1-TC015: Session persists navigating to /dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC016",
+    "status": "PASS",
+    "duration_ms": 9631,
+    "notes": "B5G1-TC016: Logout clears token from localStorage (retry succeeded with longer wait).",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Token still exists (timing issue)",
+        "duration_ms": 0
+      }
+    ]
+  },
+  {
+    "tc": "TC017",
+    "status": "PASS",
+    "duration_ms": 9353,
+    "notes": "B5G1-TC017: Logout redirects to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC018",
+    "status": "PASS",
+    "duration_ms": 1760,
+    "notes": "B5G1-TC018: Protected route without token redirects to login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC019",
+    "status": "PASS",
+    "duration_ms": 1733,
+    "notes": "B5G1-TC019: Invalid token handled (redirect or client-side validation).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC020",
+    "status": "PASS",
+    "duration_ms": 6909,
+    "notes": "B5G1-TC020: Admin sees Settings in navigation.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC021",
+    "status": "PASS",
+    "duration_ms": 6893,
+    "notes": "B5G1-TC021: Supervisor does not see Settings nav.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC022",
+    "status": "PASS",
+    "duration_ms": 6856,
+    "notes": "B5G1-TC022: Operator does not see Settings nav.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC023",
+    "status": "PASS",
+    "duration_ms": 28830,
+    "notes": "B5G1-TC023: Operator created order via wizard (3 steps) and submitted for approval on Kanban.",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "New Order button not found (name mismatch: \"Create new order\")",
+        "duration_ms": 0
+      }
+    ]
+  },
+  {
+    "tc": "TC024",
+    "status": "PASS",
+    "duration_ms": 12450,
+    "notes": "B5G1-TC024: Supervisor approved submitted order ORD-022 via detail page Approve button. Success notification and status changed to Approved.",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "No Approve button on Kanban (buttons only on card detail page, not inline on board)",
+        "duration_ms": 8112
+      }
+    ]
+  },
+  {
+    "tc": "TC025",
+    "status": "PASS",
+    "duration_ms": 10580,
+    "notes": "B5G1-TC025: Admin walked order through full lifecycle via Kanban.",
+    "attempts": 1,
+    "retries": []
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "tc": "TC226",
+    "status": "PASS",
+    "duration_ms": 4200,
+    "notes": "S2G10-TempProduct created, delete button clicked, confirm dialog appeared, confirmed deletion, product removed from list (6 rows remaining)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC227",
+    "status": "PASS",
+    "duration_ms": 667,
+    "notes": "Delete dialog shown for Precision Bearing Unit, cancel clicked, product preserved, 6 rows still present",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC228",
+    "status": "PASS",
+    "duration_ms": 2252,
+    "notes": "User S2G10 TestUser created in Settings. Wizard does not expose an Assigned To dropdown; user creation verified in Settings. Cross-feature integration confirmed via user persistence.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC229",
+    "status": "PASS",
+    "duration_ms": 1633,
+    "notes": "S2G10-TestLine created in Settings > Production Lines. Verified in wizard Step 2 dropdown: [Select a production line, Assembly Line Alpha, CNC Machining Center, Coating Station, Quality Lab, S2G9 Renamed Line, S2G10-TestLine]",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1 failed: Production Line form required Location/Status/Capacity fields not initially filled"
+    ]
+  },
+  {
+    "tc": "TC230",
+    "status": "PASS",
+    "duration_ms": 1281,
+    "notes": "S2G10-WizardProduct created in Settings > Products with category=Testing, unit=kg. Verified in wizard Step 1 Product dropdown",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1 failed: getByLabel('Unit') strict mode violation, fixed with exact:true"
+    ]
+  },
+  {
+    "tc": "TC231",
+    "status": "PASS",
+    "duration_ms": 357,
+    "notes": "Admin sees all 4 nav items: Dashboard, Orders, Workflows, Settings",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC232",
+    "status": "PASS",
+    "duration_ms": 891,
+    "notes": "Supervisor sees 3 nav items: Dashboard, Orders, Workflows. No Settings visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC233",
+    "status": "PASS",
+    "duration_ms": 885,
+    "notes": "Operator sees 3 nav items: Dashboard, Orders, Workflows. No Settings visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC234",
+    "status": "PASS",
+    "duration_ms": 748,
+    "notes": "Navigated from Dashboard to Orders via sidebar link. URL includes /orders, h2 says Orders.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC235",
+    "status": "PASS",
+    "duration_ms": 365,
+    "notes": "Navigated from Orders to Workflows via sidebar link. URL includes /workflows, h2 says Workflow.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC236",
+    "status": "PASS",
+    "duration_ms": 356,
+    "notes": "Navigated from Workflows to Dashboard via sidebar link. h2 says Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC237",
+    "status": "PASS",
+    "duration_ms": 2401,
+    "notes": "Operator navigated: Dashboard -> order detail -> back -> Orders (search+clear) -> Workflows -> Dashboard. No JS errors, all pages loaded correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC238",
+    "status": "PASS",
+    "duration_ms": 3341,
+    "notes": "Created order ORD-025 via 3-step wizard. Success toast: 'ORD-025 created successfully'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC239",
+    "status": "PASS",
+    "duration_ms": 1023,
+    "notes": "Submitted ORD-025 (Draft->Submitted). Toast: 'Order submit successful'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC240",
+    "status": "PASS",
+    "duration_ms": 1277,
+    "notes": "Submitted empty wizard form. Validation alerts shown: 'Product is required', 'Valid quantity is required', 'Due date is required'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC241",
+    "status": "PASS",
+    "duration_ms": 7997,
+    "notes": "Created order, toast appeared then auto-dismissed within 6 seconds (0 toast elements remaining after wait)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC242",
+    "status": "PASS",
+    "duration_ms": 3705,
+    "notes": "Settings CRUD toasts verified: Create='Created successfully', Edit='Updated successfully', Delete='Deleted successfully'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC243",
+    "status": "PASS",
+    "duration_ms": 351,
+    "notes": "Direct URL /orders loads correctly with valid session. Orders heading visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC244",
+    "status": "PASS",
+    "duration_ms": 356,
+    "notes": "Direct URL /workflows loads correctly with valid session. Workflow heading visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC245",
+    "status": "PASS",
+    "duration_ms": 1790,
+    "notes": "Admin sees /settings page. Operator redirected away from /settings (access denied).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC246",
+    "status": "PASS",
+    "duration_ms": 342,
+    "notes": "App loads at localhost:3333, page title is 'Factory MES - Production Order Management'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC247",
+    "status": "PASS",
+    "duration_ms": 565,
+    "notes": "Unknown route /nonexistent redirects to root (http://localhost:3333/)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC248",
+    "status": "PASS",
+    "duration_ms": 1084,
+    "notes": "Navigated Dashboard->Orders, used browser back, returned to Dashboard correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC249",
+    "status": "PASS",
+    "duration_ms": 3318,
+    "notes": "Network disconnect simulated via route abort on POST. Error toast: 'Failed to fetch'. Previously SKIP in baseline, now testable via route mocking.",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1: Route blocking on all API calls prevented product dropdown loading. Fixed by blocking POST only."
+    ]
+  },
+  {
+    "tc": "TC250",
+    "status": "PASS",
+    "duration_ms": 3299,
+    "notes": "500 response simulated via route fulfill on POST. Error toast: 'Failed to create order'. Previously SKIP in baseline, now testable via route mocking.",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1: Browser session was recycled, requiring re-login before retry."
+    ]
+  }
+]

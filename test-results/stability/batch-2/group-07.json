@@ -1,0 +1,204 @@
+[
+  {
+    "tc": "TC151",
+    "status": "PASS",
+    "duration_ms": 28000,
+    "notes": "S2G7-TC151: Admin dragged ORD-012 Submitted→Approved on Kanban. Verified on Orders grid (Approved status) and detail page (status badge, activity log shows 'Status changed from submitted to approved' with Admin USR-001 attribution and timestamp).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC152",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "S2G7-TC152: Opened Completed order ORD-002 detail — no Edit/Delete buttons, Actions section shows 'No actions available for this status'. On Kanban, attempted drag of Completed card — card remained in Completed column (count=2).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC153",
+    "status": "PASS",
+    "duration_ms": 25000,
+    "notes": "S2G7-TC153: Admin performed valid drag (ORD-013 Draft→Submitted), then invalid drag (ORD-016 Draft→Approved, rejected), then valid drag (ORD-016 Draft→Submitted, succeeded). Error state did not persist — second valid action worked correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC154",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S2G7-TC154: Operator attempted drag ORD-019 Submitted→Approved. Server returned 403 Forbidden (confirmed in console log). Card remained in Submitted column.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC155",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G7-TC155: Operator attempted drag ORD-019 Submitted→Draft (reject). Server returned 403 Forbidden (confirmed in console log). Role restriction enforced.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC156",
+    "status": "PASS",
+    "duration_ms": 6000,
+    "notes": "S2G7-TC156: Operator attempted drag ORD-012 Approved→In Production. Server returned 403 Forbidden (confirmed in console log). Operator blocked from start_production action.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC157",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC157: Operator attempted drag ORD-007 Quality Check→Quality Hold. Card remained in Quality Check column — Operator blocked from quality_hold transition.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC158",
+    "status": "FAIL",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC158: Operator attempted drag ORD-006 Quality Check→Completed. Card moved to Completed column — Operator was NOT blocked from complete transition via drag. Expected 403 but transition succeeded. Possible bug: complete transition not role-restricted for Operator on drag.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC159",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G7-TC159: Clicked 'Submit for Approval' action button on Draft order ORD-027 detail page. Status changed to Submitted successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC160",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC160: Clicked 'Approve' action button on Submitted order ORD-027 as Admin. Status changed to Approved successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC161",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S2G7-TC161: Logged in as Supervisor. Submitted ORD-022, then clicked 'Approve' button. Status changed to Approved. Supervisor can approve orders.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC162",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G7-TC162: As Admin, submitted ORD-022 then clicked 'Reject' button. Status returned to Draft successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC163",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S2G7-TC163: Logged in as Supervisor. Clicked 'Reject' on Submitted ORD-022. Status returned to Draft. Supervisor can reject orders.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC164",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC164: Clicked 'Start Production' action button on Approved order ORD-027 as Admin. Status changed to In Production.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC165",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC165: Clicked 'Complete Production' action button on In Production order ORD-027. Status changed to Quality Check.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC166",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC166: Clicked 'Quality Hold' action button on Quality Check order ORD-027 as Admin. Status changed to Quality Hold.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC167",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G7-TC167: Clicked 'Release' action button on Quality Hold order ORD-027 as Admin. Status returned to Quality Check. Browser session restarted mid-test but recovered successfully.",
+    "attempts": 2,
+    "retries": [
+      {"attempt": 1, "error": "Browser session restarted, had to re-login and retry"}
+    ]
+  },
+  {
+    "tc": "TC168",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC168: Clicked 'Mark Complete' action button on Quality Check order ORD-027 as Admin. Status changed to Completed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC169",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G7-TC169: Logged in as Operator, navigated to Workflows. Confirmed 0 Approve buttons and 0 Reject buttons on the page. Operator correctly sees no approval/rejection controls.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC170",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S2G7-TC170: Logged in as Supervisor. Verified Approve and Reject buttons visible on Submitted order detail page (confirmed through TC161 and TC163 execution where Supervisor successfully used both buttons).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC171",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC171: Verified Admin sees all workflow action buttons across order lifecycle: Submit for Approval (Draft), Approve/Reject (Submitted), Start Production (Approved), Complete Production (In Production), Quality Hold/Mark Complete (Quality Check), Release (Quality Hold). Confirmed through TC159-TC168.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC172",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC172: Optimistic update observed during drag-and-drop operations. Cards moved to target column immediately upon drop before API response completed. Verified during TC151 and TC175 drag operations.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC173",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "S2G7-TC173: Skipped per test plan — requires API failure simulation not available in standard test environment.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC174",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G7-TC174: Column counts updated correctly after transitions. TC151: Submitted 2→1, Approved 2→3 after drag. TC175: counts updated at each step of full lifecycle. Source column -1, target column +1 consistently observed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC175",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S2G7-TC175: Full lifecycle via drag-and-drop as Admin with ORD-020. Draft→Submitted→Approved→In Production→Quality Check→Completed — all 5 transitions succeeded via drag. Each transition completed without errors.",
+    "attempts": 1,
+    "retries": []
+  }
+]

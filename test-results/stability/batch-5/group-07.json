@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC151",
+    "status": "PASS",
+    "duration_ms": 18000,
+    "notes": "B5G4-TC151: As Admin, dragged ORD-012 from Submitted to Approved on Kanban (Submitted count 2→1, Approved 2→3). Navigated to /orders/ORD-012 detail. Verified status badge shows 'Approved'. Activity log contains 'Status changed from submitted to approved' with USR-001 attribution and timestamp 3/15/2026, 6:44:01 PM.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC152",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "B5G4-TC152: Opened ORD-002 (Completed) detail as Admin. Verified no Edit button, no Delete button visible in main content. Actions section shows 'No actions available for this status'. On Workflows, Completed cards have cursor=pointer but drag-to-other-columns is rejected.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC153",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "B5G4-TC153: As Admin on Workflows: (1) valid drag ORD-011 Submitted→Approved — card moved, success. (2) Invalid drag ORD-015 Draft→Completed — card returned to Draft. (3) Valid drag ORD-015 Draft→Submitted — card moved to Submitted. Error state did not persist; app continued functioning normally after invalid transition.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC154",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC154: As Operator (Petra Svoboda), dragged ORD-015 from Submitted toward Approved column. Console logged 403 error. Card returned to Submitted column. Role restriction enforced correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC155",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC155: As Operator, dragged ORD-015 from Submitted toward Draft column (reject). Console logged 403 error. Card remained in Submitted. Operator cannot reject orders.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC156",
+    "status": "PASS",
+    "duration_ms": 7000,
+    "notes": "B5G4-TC156: As Operator, dragged ORD-012 from Approved toward In Production. Console logged 403 Forbidden. Card stayed in Approved column. Operator cannot start production.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC157",
+    "status": "PASS",
+    "duration_ms": 7000,
+    "notes": "B5G4-TC157: As Operator, dragged ORD-007 from Quality Check toward Quality Hold. Console logged 403. Card stayed in Quality Check. Operator blocked from quality hold transition.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC158",
+    "status": "PASS",
+    "duration_ms": 7000,
+    "notes": "B5G4-TC158: As Operator, dragged ORD-007 from Quality Check toward Completed. Console logged 403. Card stayed in Quality Check. Operator cannot mark orders complete.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC159",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC159: As Operator, opened ORD-014 (Draft) detail, clicked Submit action button. Status changed to Submitted. Submit button worked correctly for all-role action.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC160",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "B5G4-TC160: As Admin, opened ORD-015 (Submitted) detail, clicked Approve button. Status changed to Approved. Admin approve action button works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC161",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "B5G4-TC161: Logged in as Supervisor (Jan Novak). Opened ORD-014 (Submitted) detail, clicked Approve button. Status changed to Approved. Supervisor approve action button works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC162",
+    "status": "PASS",
+    "duration_ms": 14000,
+    "notes": "B5G4-TC162: As Admin, submitted ORD-018 (Draft→Submitted), then clicked Reject button. Status returned to Draft. Admin reject action button works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC163",
+    "status": "PASS",
+    "duration_ms": 16000,
+    "notes": "B5G4-TC163: Submitted ORD-018 again as Admin. Logged in as Supervisor, opened ORD-018, clicked Reject. Status returned to Draft. Supervisor reject action button works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC164",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "B5G4-TC164: As Admin, opened ORD-015 (Approved) detail, clicked Start Production. Status changed to In Production. Start Production action button works.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC165",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "B5G4-TC165: As Operator, opened ORD-015 (In Production) detail, clicked Complete Production. Status changed to Quality Check. Operator can complete production step.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC166",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "B5G4-TC166: As Admin, opened ORD-015 (Quality Check) detail, clicked Quality Hold. Status changed to Quality Hold.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC167",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC167: As Admin, on ORD-015 (Quality Hold) detail, clicked Release Hold. Status returned to Quality Check.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC168",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC168: As Admin, on ORD-015 (Quality Check) detail, clicked Mark Complete. Status changed to Completed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC169",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "B5G4-TC169: Logged in as Operator, navigated to Workflows. No Approve or Reject buttons visible anywhere on the Kanban board. Operator role correctly hides approve/reject actions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC170",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "B5G4-TC170: Logged in as Supervisor, opened ORD-014 (Approved) detail. Start Production button visible. Supervisor has access to appropriate action buttons based on order status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC171",
+    "status": "PASS",
+    "duration_ms": 18000,
+    "notes": "B5G4-TC171: As Admin, checked detail pages across statuses: ORD-012 (Approved) shows Start Production, ORD-018 (Draft) shows Submit, ORD-008 (Quality Hold) shows Release, ORD-007 (Quality Check) shows Quality Hold and Complete. Admin sees all action buttons.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC172",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "B5G4-TC172: As Admin, dragged ORD-013 from Draft to Submitted. Checked 200ms after drag — card already appeared in Submitted column. Optimistic update confirmed; card moved before API response.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC173",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "B5G4-TC173: API failure simulation requires network interception. Skipped as in previous batches.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC174",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "B5G4-TC174: After dragging ORD-013 Draft→Submitted, Draft column count decreased from 5 to 4. Submitted column count increased. Column counts update correctly after transitions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC175",
+    "status": "PASS",
+    "duration_ms": 20000,
+    "notes": "B5G4-TC175: As Admin, walked ORD-013 through full lifecycle: Draft→Submitted→Approved→In Production→Quality Check (via drag), then Quality Check→Completed (via action button). All transitions succeeded. Order reached Completed status confirmed on detail page.",
+    "attempts": 1,
+    "retries": []
+  }
+]

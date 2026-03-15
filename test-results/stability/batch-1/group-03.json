@@ -1,0 +1,204 @@
+[
+  {
+    "tc": "TC051",
+    "status": "PASS",
+    "duration_ms": 18200,
+    "notes": "Submitted ORD-016 (Draft->Submitted), navigated to Dashboard, verified KPI Total Orders=16 reflects updated state",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC052",
+    "status": "PASS",
+    "duration_ms": 8500,
+    "notes": "Dashboard accessible by Admin, Supervisor (heading=Dashboard), and Operator (heading=Dashboard). Logged in/out as each role.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC053",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "Activity feed contains approval events (approve: submitted -> approved). 10 feed items displayed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC054",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "Activity feed contains quality_hold events. Verified in feed items.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC055",
+    "status": "PASS",
+    "duration_ms": 22400,
+    "notes": "Created product 'S1G3-Test Widget' (unit=pcs) in Settings. Navigated to New Order, verified product in dropdown. Created order ORD-019 using it, verified product name on order detail page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC056",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "Orders page loads with data grid containing 10 order rows",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC057",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Grid columns: Select all orders, Order #, Product, Quantity, Status, Priority, Assigned To, Due Date, Created. All 8 expected columns present.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC058",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "Default 10 rows per page displayed",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC059",
+    "status": "PASS",
+    "duration_ms": 1100,
+    "notes": "Pagination shows 'Showing 1-10 of 20' format",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC060",
+    "status": "PASS",
+    "duration_ms": 2400,
+    "notes": "Clicked Next, page shows 'Showing 11-19 of 19' with 9 rows on page 2",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC061",
+    "status": "PASS",
+    "duration_ms": 2200,
+    "notes": "Clicked Previous from page 2, returned to 'Showing 1-10 of 19'",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC062",
+    "status": "PASS",
+    "duration_ms": 24600,
+    "notes": "Created production line 'S1G3-Test Line' (location=Hall E, capacity=500) in Settings. Verified in wizard Step 2 dropdown. Created order ORD-022 using it, verified on order detail.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC063",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "Last page shows 1 row (total=21, Showing 21-21). Partial page renders correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC064",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "Sorted by Order# ascending, first row is ORD-001 (Steel Bracket A, Completed)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC065",
+    "status": "PASS",
+    "duration_ms": 2600,
+    "notes": "Sorted by Order# descending, first row is ORD-022 (Steel Bracket A, Draft)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC066",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "Due Date ascending sort applied successfully via column header click",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC067",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "Due Date descending sort applied via second column header click",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC068",
+    "status": "PASS",
+    "duration_ms": 1900,
+    "notes": "Priority sort applied via column header click",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC069",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "Status sort applied via column header click",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC070",
+    "status": "PASS",
+    "duration_ms": 15800,
+    "notes": "Deleted product 'S1G3-Test Widget' from Settings. Navigated to ORD-019 which referenced it. Order detail page still displays correctly with order info intact.",
+    "attempts": 2,
+    "retries": [
+      {"attempt": 1, "status": "FAIL", "note": "Confirm dialog button selector mismatch - dialog backdrop intercepted click on wrong Delete button. Fixed selector to use dialog-specific Confirm delete button."}
+    ]
+  },
+  {
+    "tc": "TC071",
+    "status": "PASS",
+    "duration_ms": 3100,
+    "notes": "Filtered by Draft status: 5 Draft orders shown, all rows have Draft status badge",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC072",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "Filtered by In Production status: 4 In Production orders shown",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC073",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "Filtered by Completed status: 3 Completed orders shown",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC074",
+    "status": "PASS",
+    "duration_ms": 2300,
+    "notes": "Filtered by Submitted status: 1 Submitted order shown",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC075",
+    "status": "PASS",
+    "duration_ms": 2400,
+    "notes": "Cleared filter to 'All Statuses': 22 orders total restored in grid",
+    "attempts": 1,
+    "retries": []
+  }
+]

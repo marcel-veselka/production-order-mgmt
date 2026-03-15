@@ -1,0 +1,248 @@
+[
+  {
+    "tc": "TC101",
+    "status": "PASS",
+    "duration_ms": 4372,
+    "notes": "Success notification shown after order creation via 3-step wizard as Admin",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC102",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "Order number ORD-016 visible in page URL and detail view after creation",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC103",
+    "status": "PASS",
+    "duration_ms": 1074,
+    "notes": "ORD-016 visible in orders grid after returning to list",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC104",
+    "status": "PASS",
+    "duration_ms": 4,
+    "notes": "ORD-016 shows Draft status in grid row",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC105",
+    "status": "PASS",
+    "duration_ms": 3774,
+    "notes": "Admin created order successfully via full wizard flow",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC106",
+    "status": "PASS",
+    "duration_ms": 5955,
+    "notes": "Supervisor created order successfully via full wizard flow (previously FAIL, now fixed)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC107",
+    "status": "PASS",
+    "duration_ms": 5928,
+    "notes": "Operator created order successfully via full wizard flow (previously FAIL, now fixed)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC108",
+    "status": "PASS",
+    "duration_ms": 1062,
+    "notes": "Order detail shows all fields: order#, status, product, quantity, priority, assigned user",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Click selector timeout on ORD-001 (not on current page)"
+      }
+    ]
+  },
+  {
+    "tc": "TC109",
+    "status": "PASS",
+    "duration_ms": 2162,
+    "notes": "Operator detail: Submit for Approval, Edit, Delete visible; no Approve/Reject. Kanban: no Approve/Reject buttons",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Selector mismatch"
+      },
+      {
+        "attempt": 2,
+        "error": "Wrong order status after transitions"
+      }
+    ]
+  },
+  {
+    "tc": "TC110",
+    "status": "PASS",
+    "duration_ms": 3,
+    "notes": "Product name resolved (e.g. Copper Wire Harness), no raw PROD-xxx ID visible",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC111",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "Assigned user name displayed (Eva Kralova), not raw user ID",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC112",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "Production Line field present with resolved name (Assembly Line Alpha)",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Pattern mismatch - needed different regex"
+      }
+    ]
+  },
+  {
+    "tc": "TC113",
+    "status": "PASS",
+    "duration_ms": 1688,
+    "notes": "Edit mode enabled with 5 editable fields on Draft order ORD-020",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC114",
+    "status": "PASS",
+    "duration_ms": 4397,
+    "notes": "Supervisor sees Approve and Reject buttons on Submitted order detail. Kanban uses drag-and-drop for transitions (no inline buttons).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC115",
+    "status": "PASS",
+    "duration_ms": 1229,
+    "notes": "Quantity updated to 999 and persisted on Draft order detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC116",
+    "status": "PASS",
+    "duration_ms": 1176,
+    "notes": "Edit button not present on Submitted order detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC117",
+    "status": "PASS",
+    "duration_ms": 1144,
+    "notes": "Edit button not present on In Production order detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC118",
+    "status": "PASS",
+    "duration_ms": 1145,
+    "notes": "Edit button not present on Completed order detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC119",
+    "status": "PASS",
+    "duration_ms": 2098,
+    "notes": "DOM dialog shown: 'Are you sure you want to delete order ORD-027? This action cannot be undone.' with Delete/Cancel buttons",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "ORD-024 was Submitted, not Draft"
+      },
+      {
+        "attempt": 2,
+        "error": "ORD-023 was Submitted, not Draft"
+      }
+    ]
+  },
+  {
+    "tc": "TC120",
+    "status": "PASS",
+    "duration_ms": 3233,
+    "notes": "Confirmed deletion of ORD-026, redirected to /orders, order gone from grid",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC121",
+    "status": "PASS",
+    "duration_ms": 530,
+    "notes": "Cancelled deletion of ORD-027, order still visible on detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC122",
+    "status": "PASS",
+    "duration_ms": 1166,
+    "notes": "Delete button not present on non-Draft (Approved) order detail page",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC123",
+    "status": "FAIL",
+    "duration_ms": 16611,
+    "notes": "2/9 CRUD operations succeeded: User Create=true, Edit=true. Delete and Production Lines/Products tabs failed due to persistent modal overlay blocking interactions after form submissions.",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Button accessible name mismatch (Add new User vs Add User)"
+      },
+      {
+        "attempt": 2,
+        "error": "Tab name collision (Production Lines matches /product/i) and unit field is <select> not <input>"
+      }
+    ]
+  },
+  {
+    "tc": "TC124",
+    "status": "PASS",
+    "duration_ms": 6452,
+    "notes": "Created ORD-032, edited quantity to 777, verified on detail page and Kanban card (Qty: 777)",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "ORD-022 no longer Draft"
+      },
+      {
+        "attempt": 2,
+        "error": "No Draft orders available, had to create new one"
+      }
+    ]
+  },
+  {
+    "tc": "TC125",
+    "status": "PASS",
+    "duration_ms": 568,
+    "notes": "Pagination shows 'Showing 1-10 of 25' - at least 15 seed orders present (25 total including test-created orders)",
+    "attempts": 1,
+    "retries": []
+  }
+]

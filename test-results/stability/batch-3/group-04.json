@@ -1,0 +1,210 @@
+[
+  {
+    "tc": "TC076",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G4-TC076: Search 'ORD-001' returns exactly 1 matching result with correct order number, product, status",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC077",
+    "status": "PASS",
+    "duration_ms": 515,
+    "notes": "S3G4-TC077: Partial search 'ORD-' returns filtered results (10 rows visible, matching all ORD- prefixed orders)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC078",
+    "status": "PASS",
+    "duration_ms": 513,
+    "notes": "S3G4-TC078: Search 'NONEXISTENT' returns 0 rows, 'No orders found' empty state displayed",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC079",
+    "status": "PASS",
+    "duration_ms": 514,
+    "notes": "S3G4-TC079: Clearing search field restores all orders (10 rows visible on page 1)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC080",
+    "status": "PASS",
+    "duration_ms": 573,
+    "notes": "S3G4-TC080: 'New Order' button navigates to /orders/new with wizard step 1 (Product Details) and product dropdown visible",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC081",
+    "status": "PASS",
+    "duration_ms": 3387,
+    "notes": "S3G4-TC081: Admin moved ORD-018 Draft->Submitted->Approved->In Production. Dashboard 'In Production' KPI updated from 3 to 4",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC082",
+    "status": "PASS",
+    "duration_ms": 4,
+    "notes": "S3G4-TC082: Step 1 Product dropdown lists exactly 6 products: Steel Bracket A, Aluminum Frame B, Hydraulic Seal Kit, Copper Wire Harness, Polymer Coating Mix, Precision Bearing Unit",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC083",
+    "status": "PASS",
+    "duration_ms": 2666,
+    "notes": "S3G4-TC083: Admin created order (Copper Wire Harness, qty 999). Dashboard Recent Orders table shows new order with Draft status",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC084",
+    "status": "PASS",
+    "duration_ms": 2534,
+    "notes": "S3G4-TC084: Admin submitted ORD-017 on Workflows. Dashboard activity feed updated with submit transition entry",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC085",
+    "status": "FAIL",
+    "duration_ms": 2100,
+    "notes": "S3G4-TC085: Operator dashboard shows 0 Total Orders and 'No recent orders' — cannot click a row. Operator-scoped dashboard appears empty despite orders existing in the system. Bug: dashboard data not populated for Operator role.",
+    "attempts": 3,
+    "retries": [
+      {"attempt": 2, "error": "Operator dashboard still empty after re-login"},
+      {"attempt": 3, "error": "Confirmed: Total Orders=0, Recent Orders='No recent orders' for Operator"}
+    ]
+  },
+  {
+    "tc": "TC086",
+    "status": "PASS",
+    "duration_ms": 334,
+    "notes": "S3G4-TC086: Clicking Next with empty fields shows 3 validation errors: 'Product is required', 'Valid quantity is required', 'Due date is required'. Priority defaults to Medium so no error needed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC087",
+    "status": "PASS",
+    "duration_ms": 3589,
+    "notes": "S3G4-TC087: Admin searched ORD-013, opened detail (Draft status), clicked Submit. Returned to grid, searched again — order now shows Submitted status",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC088",
+    "status": "PASS",
+    "duration_ms": 2574,
+    "notes": "S3G4-TC088: Operator filtered Orders by 'In Production' (4 rows). Navigated to Workflows — 'In Production' column shows 4 cards. Counts match.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC089",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "S3G4-TC089: Admin filtered by Draft, selected all rows, clicked 'Export Selected'. CSV file 'orders-2026-03-15.csv' downloaded successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC090",
+    "status": "PASS",
+    "duration_ms": 547,
+    "notes": "S3G4-TC090: Filled Step 1 (Steel Bracket A, qty 100, due 2026-04-15), clicked Next. Step 2 'Production Parameters' loaded with Production Line dropdown visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC091",
+    "status": "PASS",
+    "duration_ms": 3,
+    "notes": "S3G4-TC091: Step 2 Production Line dropdown lists exactly 4 lines: Assembly Line Alpha, CNC Machining Center, Coating Station, Quality Lab",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC092",
+    "status": "PASS",
+    "duration_ms": 329,
+    "notes": "S3G4-TC092: Clicking Next without selecting Production Line shows validation error (required field)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC093",
+    "status": "PASS",
+    "duration_ms": 4408,
+    "notes": "S3G4-TC093: Operator navigated to /settings — redirected away (access denied). Then created order via wizard and navigated to Workflows — both worked correctly despite prior denied access.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC094",
+    "status": "PASS",
+    "duration_ms": 2871,
+    "notes": "S3G4-TC094: Admin session persisted across Dashboard, Orders, New Order wizard, Order Detail (ORD-027), Workflows, Settings, and back to Dashboard. 'Admin' user context visible in header at every checkpoint.",
+    "attempts": 2,
+    "retries": [
+      {"attempt": 1, "error": "Nav selector mismatch caused false negative — retried with correct text check"}
+    ]
+  },
+  {
+    "tc": "TC095",
+    "status": "PASS",
+    "duration_ms": 1985,
+    "notes": "S3G4-TC095: Admin navigated to Settings > Production Lines, clicked Logout. Login form displayed, localStorage token removed. Redirect to login page confirmed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC096",
+    "status": "FAIL",
+    "duration_ms": 3050,
+    "notes": "S3G4-TC096: Operator logged in, token corrupted in localStorage. Navigate to /orders — NOT redirected to login. Page reload also does not trigger redirect. Bug: app does not validate token on navigation/reload, corrupted token is accepted.",
+    "attempts": 3,
+    "retries": [
+      {"attempt": 2, "error": "Token corruption still not detected after page.goto"},
+      {"attempt": 3, "error": "Token corruption not detected even after page.reload()"}
+    ]
+  },
+  {
+    "tc": "TC097",
+    "status": "PASS",
+    "duration_ms": 571,
+    "notes": "S3G4-TC097: Filled Step 2 (Assembly Line Alpha), clicked Next. Step 3 'Review & Submit' loaded successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC098",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "S3G4-TC098: Review step displays all entered data: product (Steel Bracket A), quantity (100), priority (Medium), production line (Assembly Line Alpha)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC099",
+    "status": "PASS",
+    "duration_ms": 531,
+    "notes": "S3G4-TC099: Navigated back from Step 2 to Step 1. Product and quantity values preserved (product selected, qty=100).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC100",
+    "status": "PASS",
+    "duration_ms": 532,
+    "notes": "S3G4-TC100: Navigated back from Step 3 to Step 2. Production Line selection preserved (LINE-01 / Assembly Line Alpha).",
+    "attempts": 1,
+    "retries": []
+  }
+]

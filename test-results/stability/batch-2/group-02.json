@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC026",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S2G2- Email field retains 'admin@factory.local' after submitting wrong password. Error alert shown, email preserved.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC027",
+    "status": "PASS",
+    "duration_ms": 25000,
+    "notes": "S2G2- Admin moved ORD-007 from Quality Check to Quality Hold then released back to Quality Check. Activity log shows both hold and release with Admin (USR-001) attribution and timestamps.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC028",
+    "status": "PASS",
+    "duration_ms": 18000,
+    "notes": "S2G2- Operator blocked from approving ORD-011 with error 'Role operator cannot perform approve'. Operator successfully submitted ORD-020 (Draft to Submitted).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC029",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S2G2- After failed login showing 'Login failed' alert, correcting password and resubmitting cleared the error. Success notification shown instead.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC030",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "S2G2- Login API completes too fast to reliably observe disabled/loading state on button. Cannot be tested in headless mode.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC031",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G2- Dashboard heading visible, KPI cards rendered, chart and tables loaded after login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC032",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Total Orders KPI card shows numeric value '15' (initial), matching API response totalOrders=15.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC033",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- In Production KPI card shows '3', matching API response inProduction=3.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC034",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Completed Today KPI card shows '0' initially, later updated to '2' after transitions. Matches API.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC035",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Quality Hold KPI card shows '1', matching API response qualityHold=1.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC036",
+    "status": "PASS",
+    "duration_ms": 15000,
+    "notes": "S2G2- Supervisor rejected ORD-020 from Submitted back to Draft via API. Verified on order detail page showing 'Draft' status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC037",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S2G2- Admin edited USR-005 (Eva Kralova) role from operator to supervisor via PUT /api/users/USR-005. API confirmed role change. Reverted successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC038",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S2G2- Supervisor approved ORD-019 and ORD-017 in sequence (ORD-016 was already approved). All transitions succeeded. Submitted count decreased accordingly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC039",
+    "status": "PASS",
+    "duration_ms": 15000,
+    "notes": "S2G2- Admin performed quality hold loop on ORD-006: quality_hold -> quality_check -> quality_hold -> quality_check -> completed. All 5 transitions succeeded.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC040",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G2- Daily Production Output chart shows 7 date labels (2026-03-09 through 2026-03-15) with corresponding bars.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC041",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S2G2- Operator completed production on ORD-019 (in_production -> quality_check). API confirmed status change to quality_check.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC042",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S2G2- Dashboard API response chartData has 7 entries matching displayed dates. KPI values (totalOrders=15, inProduction=3, completedToday=0, qualityHold=1) match UI cards.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC043",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Recent Orders table contains exactly 5 rows in the dashboard snapshot.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC044",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- All 4 column headers present: Order #, Product, Status, Due Date.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC045",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G2- Recent orders sorted with most recently updated first. Most recent order appears at top of table.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC046",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Status values rendered as styled badges inside generic elements (e.g., Quality Check, Draft, In Production) — not raw text.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC047",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Activity feed displays 10 entries in the 'Recent activity' list.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC048",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Each activity entry has a timestamp (e.g., '3/15/2026, 1:20:17 PM').",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC049",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Activity feed sorted most recent first: timestamps decrease from top to bottom.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC050",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G2- Activity feed includes status change events: 'approve: submitted -> approved', 'complete_production: in_production -> quality_check', 'quality_hold: quality_check -> quality_hold', etc.",
+    "attempts": 1,
+    "retries": []
+  }
+]

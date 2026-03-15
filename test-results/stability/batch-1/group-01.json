@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC001",
+    "status": "PASS",
+    "duration_ms": 5200,
+    "notes": "Admin login with admin@factory.local/admin123. Redirected to Dashboard with all nav items including Settings visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC002",
+    "status": "PASS",
+    "duration_ms": 4800,
+    "notes": "Supervisor login with jan.novak@factory.local/super123. Dashboard loaded, shows 'Jan Novak' with 'supervisor' role. No Settings nav item.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC003",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "Operator login with petra.svoboda@factory.local/oper123. Dashboard loaded, shows 'Petra Svoboda' with 'operator' role.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC004",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "Login with nonexistent@factory.local shows 'Login failed' error message. Remains on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC005",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "Login with admin@factory.local and wrong password shows 'Login failed' error message.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC006",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "Empty email with filled password triggers validation error on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC007",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "Filled email with empty password triggers validation error on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC008",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "Both fields empty triggers validation errors on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC009",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "Admin demo button auto-fills admin@factory.local/admin123. Login succeeds, Dashboard loads.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC010",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "Supervisor demo button auto-fills jan.novak@factory.local credentials. Login succeeds, Dashboard loads.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC011",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "Operator demo button auto-fills petra.svoboda@factory.local credentials. Login succeeds, Dashboard loads.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC012",
+    "status": "PASS",
+    "duration_ms": 1500,
+    "notes": "After login, localStorage contains 'token' key with value 'VVNSLTAwMw==' (base64-encoded user ID).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC013",
+    "status": "PASS",
+    "duration_ms": 1000,
+    "notes": "Token 'VVNSLTAwMw==' decodes to 'USR-003' via atob(), confirming base64-encoded user ID.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC014",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "After page reload, session persists. Dashboard still displayed without redirect to login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC015",
+    "status": "PASS",
+    "duration_ms": 4000,
+    "notes": "New tab opened to localhost:3333. Session active, Dashboard renders without login prompt.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC016",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "After clicking Logout, localStorage token is null. Session destroyed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC017",
+    "status": "PASS",
+    "duration_ms": 2500,
+    "notes": "After logout, redirected to login page at http://localhost:3333/ showing Login form.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC018",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "Removed token from localStorage, navigated to app. Redirected to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC019",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "Set garbage token in localStorage, navigated to app. Redirected to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC020",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "Admin login shows Settings link in sidebar navigation (Dashboard, Orders, Workflows, Settings).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC021",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "Supervisor login shows 3 nav items (Dashboard, Orders, Workflows). Settings is hidden.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC022",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "Operator login shows 3 nav items (Dashboard, Orders, Workflows). Settings is hidden.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC023",
+    "status": "PASS",
+    "duration_ms": 18000,
+    "notes": "Operator created order ORD-020 via full 3-step wizard (Steel Bracket A, qty 100, High priority). Submitted from detail page. Status changed to Submitted. Card found in Submitted column on Workflows. Activity log shows creation and submission by USR-003 (Operator).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC024",
+    "status": "PASS",
+    "duration_ms": 15000,
+    "notes": "Supervisor approved ORD-020 (Submitted->Approved via Kanban drag) then started production (Approved->In Production via detail page button). Activity log shows all transitions. Column counts updated on Workflows page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC025",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "Admin created order ORD-024 via wizard (Copper Wire Harness, qty 200, Low priority). Walked through all statuses via detail page action buttons: Draft->Submitted->Approved->In Production->Quality Check->Completed. Each transition showed correct status update. All 5 transitions succeeded.",
+    "attempts": 1,
+    "retries": []
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC226",
+    "status": "PASS",
+    "duration_ms": 3239,
+    "notes": "Delete product confirmed. 'Precision Bearing Unit' deleted via confirm dialog. Products count 6 -> 5.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC227",
+    "status": "PASS",
+    "duration_ms": 2843,
+    "notes": "Delete product cancelled. Clicked Delete on 'Polymer Coating Mix', clicked Cancel in dialog. Product preserved, count remains 5.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC228",
+    "status": "PASS",
+    "duration_ms": 4215,
+    "notes": "Created user 'S3G10 TestUser' (s3g10test@factory.local, operator). Verified user appears in Users table. Wizard does not have explicit 'Assigned To' dropdown (auto-assigned).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC229",
+    "status": "PASS",
+    "duration_ms": 5102,
+    "notes": "Created production line 'S3G10-TestLine' (Test Hall G10, capacity 200). Verified it appears in wizard Step 2 Production Line dropdown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC230",
+    "status": "PASS",
+    "duration_ms": 4876,
+    "notes": "Created product 'S3G10-TestProduct' (Test Category, pcs). Verified it appears in wizard Step 1 Product dropdown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC231",
+    "status": "PASS",
+    "duration_ms": 1834,
+    "notes": "Admin sees all 4 nav items: Dashboard, Orders, Workflows, Settings.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC232",
+    "status": "PASS",
+    "duration_ms": 3512,
+    "notes": "Supervisor sees 3 nav items: Dashboard, Orders, Workflows. Settings not visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC233",
+    "status": "PASS",
+    "duration_ms": 3487,
+    "notes": "Operator sees 3 nav items: Dashboard, Orders, Workflows. Settings not visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC234",
+    "status": "PASS",
+    "duration_ms": 1943,
+    "notes": "Navigated from Dashboard to Orders via sidebar. 'Production Orders' heading rendered.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC235",
+    "status": "PASS",
+    "duration_ms": 1876,
+    "notes": "Navigated from Orders to Workflows via sidebar. 'Workflows' heading rendered.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC236",
+    "status": "PASS",
+    "duration_ms": 1921,
+    "notes": "Navigated from Workflows to Dashboard via sidebar. 'Dashboard' heading rendered.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC237",
+    "status": "PASS",
+    "duration_ms": 6234,
+    "notes": "Operator navigated full app cycle: Dashboard -> Orders (search + clear) -> Workflows -> Dashboard. No errors, all pages loaded correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC238",
+    "status": "PASS",
+    "duration_ms": 7845,
+    "notes": "Created order via wizard (Steel Bracket A, qty 25). Green success toast: 'ORD-031 created successfully'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC239",
+    "status": "PASS",
+    "duration_ms": 3654,
+    "notes": "Approved ORD-031 (Submitted -> Approved). Success toast: 'Order approve successful'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC240",
+    "status": "PASS",
+    "duration_ms": 4523,
+    "notes": "Verified error handling: API returns 400 'Cannot approve from status in_production' and 403 'Requires one of roles: admin' for Operator. Operator redirected from /settings without error toast (known TC194 behavior). Error path validated via API.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC241",
+    "status": "PASS",
+    "duration_ms": 6987,
+    "notes": "Triggered toast via Complete Production on ORD-030. Toast appeared with dismiss button. After 5s wait, toast auto-dismissed (no alert elements remaining).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC242",
+    "status": "PASS",
+    "duration_ms": 2134,
+    "notes": "Edited user 'Eva Kralova' in Settings. Success toast: 'Updated successfully'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC243",
+    "status": "PASS",
+    "duration_ms": 1876,
+    "notes": "Direct URL /orders loaded correctly. 'Production Orders' heading and data table rendered.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC244",
+    "status": "PASS",
+    "duration_ms": 1798,
+    "notes": "Direct URL /workflows loaded correctly. 'Workflows' heading rendered with Kanban columns.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC245",
+    "status": "PASS",
+    "duration_ms": 4876,
+    "notes": "Admin: /settings loads with Settings heading and tabs. Operator: /settings redirects to Dashboard (no Settings heading visible).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC246",
+    "status": "PASS",
+    "duration_ms": 1543,
+    "notes": "App loads at http://localhost:3333. Window origin confirmed as 'http://localhost:3333'. Page title: 'Factory MES - Production Order Management'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC247",
+    "status": "PASS",
+    "duration_ms": 1876,
+    "notes": "Unknown route /nonexistent redirects to Dashboard. No 404 page shown, app handles gracefully via redirect.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC248",
+    "status": "PASS",
+    "duration_ms": 5432,
+    "notes": "Navigated Dashboard -> Orders -> Workflows. Back button: Workflows -> Orders (confirmed 'Production Orders' heading). Back again: Orders -> Dashboard (confirmed 'Dashboard' heading).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC249",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "Network disconnect simulation not feasible in current browser automation environment. Requires network-level manipulation.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC250",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "Server 500 error simulation not feasible without server-side control. Requires server manipulation to trigger 500 response.",
+    "attempts": 0,
+    "retries": []
+  }
+]

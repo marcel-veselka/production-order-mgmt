@@ -1,0 +1,211 @@
+[
+  {
+    "tc": "TC126",
+    "status": "PASS",
+    "duration_ms": 1096,
+    "notes": "All 7 columns present: Draft, Submitted, Approved, In Production, Quality Check, Quality Hold, Completed",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC127",
+    "status": "PASS",
+    "duration_ms": 4521,
+    "notes": "ORD-019 deleted. Confirmed removed from Orders grid, Workflows Kanban, and Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC128",
+    "status": "PASS",
+    "duration_ms": 502,
+    "notes": "15 cards showing ORD-XXX format order numbers on Kanban board",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC129",
+    "status": "PASS",
+    "duration_ms": 305,
+    "notes": "Found products: Steel Bracket A, Precision Bearing Unit, Hydraulic Seal Kit, Polymer Coating Mix, Copper Wire Harness, Aluminum Frame B",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC130",
+    "status": "PASS",
+    "duration_ms": 8245,
+    "notes": "Operator created order ORD-020 with all fields: product=Steel Bracket A, qty=250, priority=High, due=4/15/2026, line=Assembly Line Alpha, shift=Afternoon, notes=extended text. All verified on review step and detail page. Activity log shows creation entry.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC131",
+    "status": "PASS",
+    "duration_ms": 2693,
+    "notes": "Operator created order ORD-023 with minimum fields only (product, qty, due date, priority, production line). Shift defaulted to Morning, notes empty. Order created successfully with Draft status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC132",
+    "status": "PASS",
+    "duration_ms": 301,
+    "notes": "Found assigned users on cards: Petra Svoboda, Eva Kralova, Tomas Dvorak",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC133",
+    "status": "PASS",
+    "duration_ms": 1298,
+    "notes": "ORD-013 dragged from Draft to Submitted via mouse events. Card appeared in Submitted column with success notification.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC134",
+    "status": "PASS",
+    "duration_ms": 1087,
+    "notes": "ORD-013 approved by Admin via drag from Submitted to Approved",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC135",
+    "status": "PASS",
+    "duration_ms": 1406,
+    "notes": "ORD-027 approved by Supervisor via drag from Submitted to Approved",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC136",
+    "status": "PASS",
+    "duration_ms": 1283,
+    "notes": "ORD-017 rejected back to Draft by Admin via drag from Submitted to Draft",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC137",
+    "status": "PASS",
+    "duration_ms": 1389,
+    "notes": "ORD-024 rejected to Draft by Supervisor via drag from Submitted to Draft",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC138",
+    "status": "PASS",
+    "duration_ms": 1098,
+    "notes": "ORD-013 started production as Admin via drag from Approved to In Production",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC139",
+    "status": "PASS",
+    "duration_ms": 1087,
+    "notes": "ORD-013 moved from In Production to Quality Check via drag",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1 failed: Quality Check column not visible in 1280px viewport. Resized to 2200px and retried."
+    ]
+  },
+  {
+    "tc": "TC140",
+    "status": "PASS",
+    "duration_ms": 1085,
+    "notes": "ORD-013 completed via drag from Quality Check to Completed",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1 failed: Completed column not visible in 1280px viewport. Resized to 2200px and retried."
+    ]
+  },
+  {
+    "tc": "TC141",
+    "status": "PASS",
+    "duration_ms": 1411,
+    "notes": "ORD-018 moved from Quality Check to Quality Hold via drag",
+    "attempts": 3,
+    "retries": [
+      "Attempt 1 failed: Quality Hold column not visible in 1280px viewport.",
+      "Attempt 2 failed: drag overshot to Completed column. Re-setup order and used precise targeting on attempt 3."
+    ]
+  },
+  {
+    "tc": "TC142",
+    "status": "PASS",
+    "duration_ms": 1391,
+    "notes": "ORD-018 released from Quality Hold back to Quality Check via drag",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC143",
+    "status": "PASS",
+    "duration_ms": 1080,
+    "notes": "Invalid transition Draft->Approved rejected. ORD-020 stayed in Draft column after drag attempt.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC144",
+    "status": "PASS",
+    "duration_ms": 4865,
+    "notes": "Total orders: 28. Created 2 new orders, pagination updated to reflect new total. Navigated to last page to verify new orders present.",
+    "attempts": 2,
+    "retries": [
+      "Attempt 1 failed: wrong pagination selector (nav[aria-label] vs class-based). Fixed to use text matching."
+    ]
+  },
+  {
+    "tc": "TC145",
+    "status": "PASS",
+    "duration_ms": 1683,
+    "notes": "Ascending sort valid: dates 3/5/2026, 3/6/2026, 3/12/2026... Descending sort valid: dates 7/1/2026, 5/15/2026, 5/1/2026...",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC146",
+    "status": "PASS",
+    "duration_ms": 3962,
+    "notes": "Searched 'Steel', found matching orders. Opened order detail, verified Steel Bracket A product. Submitted Draft order from detail page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC147",
+    "status": "PASS",
+    "duration_ms": 2475,
+    "notes": "Order count before: 29, after cancellation: 29. Started wizard, filled Step 1 and Step 2, navigated away. No new draft order created.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC148",
+    "status": "PASS",
+    "duration_ms": 3784,
+    "notes": "ORD-029: invalid drag to Approved rejected (stayed in Draft), then valid drag to Submitted succeeded immediately after.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC149",
+    "status": "PASS",
+    "duration_ms": 2226,
+    "notes": "ORD-030 transitioned to In Production via detail page Start Production button. Verified status on detail page, then confirmed card in In Production column on Kanban.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC150",
+    "status": "PASS",
+    "duration_ms": 3160,
+    "notes": "ORD-028 in Completed column: drag attempt to Draft had no effect. Card stayed in Completed column.",
+    "attempts": 1,
+    "retries": []
+  }
+]

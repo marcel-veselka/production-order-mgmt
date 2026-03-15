@@ -1,0 +1,220 @@
+[
+  {
+    "tc": "TC201",
+    "status": "PASS",
+    "duration_ms": 1082,
+    "notes": "Dialog stays open without name - submission blocked by API 400 validation",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC202",
+    "status": "PASS",
+    "duration_ms": 1085,
+    "notes": "Dialog stays open without email - submission blocked by API 400 validation",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC203",
+    "status": "PASS",
+    "duration_ms": 4862,
+    "notes": "Tab switching works: created line on Production Lines tab, product on Products tab, verified Users still loaded, verified line persisted after tab switch",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC204",
+    "status": "PASS",
+    "duration_ms": 1604,
+    "notes": "User S1G9-NewUser created successfully and visible in table",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "status": "FAIL",
+        "notes": "User was created (dialog closed) but getByText check returned false due to timing; snapshot confirmed user present in table"
+      }
+    ]
+  },
+  {
+    "tc": "TC205",
+    "status": "PASS",
+    "duration_ms": 1585,
+    "notes": "Dialog stays open with duplicate email admin@factory.local - server rejects with 400",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC206",
+    "status": "PASS",
+    "duration_ms": 30,
+    "notes": "Edit form pre-filled with name=S1G9-NewUser email=s1g9-newuser@factory.local",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC207",
+    "status": "PASS",
+    "duration_ms": 1533,
+    "notes": "User name changed to S1G9-EditedUser and visible in table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC208",
+    "status": "PASS",
+    "duration_ms": 536,
+    "notes": "Confirmation dialog shown with 'Are you sure you want to delete' message, Delete and Cancel buttons",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC209",
+    "status": "PASS",
+    "duration_ms": 2577,
+    "notes": "User removed after clicking Confirm delete button",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "status": "FAIL",
+        "notes": "Strict mode violation: two buttons matched /delete|confirm|yes/i pattern. Fixed by using exact 'Confirm delete' button name."
+      }
+    ]
+  },
+  {
+    "tc": "TC210",
+    "status": "PASS",
+    "duration_ms": 542,
+    "notes": "User preserved after clicking Cancel in delete confirmation dialog",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC211",
+    "status": "PASS",
+    "duration_ms": 1031,
+    "notes": "Production Lines tab renders with table and heading visible. Columns: Name, Location, Status, Capacity, Actions",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC212",
+    "status": "PASS",
+    "duration_ms": 4286,
+    "notes": "Renamed Assembly Line Alpha to S1G9-RenamedLine in Settings, verified it appears in New Order wizard Step 2 dropdown. Restored original name.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC213",
+    "status": "PASS",
+    "duration_ms": 3,
+    "notes": "4 production lines found (Assembly Line Alpha, CNC Machining Center, Coating Station, Quality Lab)",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC214",
+    "status": "PASS",
+    "duration_ms": 1585,
+    "notes": "Production line S1G9-TestLine created with Location=Hall E, Capacity=500 and visible in table",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC215",
+    "status": "PASS",
+    "duration_ms": 1057,
+    "notes": "Dialog stays open with empty fields - validation prevents submission",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC216",
+    "status": "PASS",
+    "duration_ms": 1554,
+    "notes": "Production line name changed from S1G9-TestLine to S1G9-EditedLine",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC217",
+    "status": "PASS",
+    "duration_ms": 2046,
+    "notes": "Production line deleted successfully after confirm",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC218",
+    "status": "PASS",
+    "duration_ms": 1067,
+    "notes": "Delete confirmation dialog shown, cancel preserves production line",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC219",
+    "status": "PASS",
+    "duration_ms": 1022,
+    "notes": "Products tab renders with heading and table visible. Columns: Name, Category, Unit, Actions",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC220",
+    "status": "PASS",
+    "duration_ms": 3222,
+    "notes": "Renamed Steel Bracket A to S1G9-RenamedProduct in Settings, verified it appears in New Order wizard Step 1 product dropdown. Restored original name.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC221",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "8 products found (6 seed + 2 from other test groups); seed products confirmed present",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC222",
+    "status": "PASS",
+    "duration_ms": 3097,
+    "notes": "Product S1G9-TestProduct created with Category=Test Category, Unit=pcs",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "status": "FAIL",
+        "notes": "Unit field is a combobox (dropdown), not textbox. fill() silently failed, leaving unit as 'Select Unit'. Fixed by using selectOption('pcs')."
+      }
+    ]
+  },
+  {
+    "tc": "TC223",
+    "status": "PASS",
+    "duration_ms": 1064,
+    "notes": "Dialog stays open with empty product form - validation prevents submission",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC224",
+    "status": "PASS",
+    "duration_ms": 3187,
+    "notes": "Product S1G9-FullProduct created with category=S1G9-Category, unit=kg. Persisted after switching to Users tab and back to Products.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC225",
+    "status": "PASS",
+    "duration_ms": 1567,
+    "notes": "Product name changed from S1G9-TestProduct to S1G9-EditedProduct",
+    "attempts": 1,
+    "retries": []
+  }
+]

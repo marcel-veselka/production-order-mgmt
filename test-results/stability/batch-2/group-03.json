@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC051",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "S2G3-TC051: Submitted ORD-015 (Draft->Submitted), returned to Dashboard. Activity feed updated with submit event, Recent Orders shows ORD-015 as Submitted. KPI values reflect current state correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC052",
+    "status": "PASS",
+    "duration_ms": 18000,
+    "notes": "S2G3-TC052: Logged in as Admin, Supervisor, and Operator. All three roles see Dashboard heading and KPI cards render correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC053",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC053: Activity feed contains approval events: 'approve: submitted -> approved' visible in multiple entries (Approved for Q2 stock, Client escalation, etc.).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC054",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC054: Activity feed contains quality hold event: 'quality_hold: quality_check -> quality_hold - Surface defect detected on batch 3'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC055",
+    "status": "PASS",
+    "duration_ms": 35000,
+    "notes": "S2G3-TC055: Created 'Test Widget' product (unit=pcs, category=Testing) in Settings -> Products. Navigated to New Order wizard, verified Test Widget in product dropdown. Created order ORD-021 with Test Widget. Order detail page shows product name 'Test Widget' correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC056",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC056: Orders page loads with table 'Production orders' containing data rows. Grid renders with order data visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC057",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC057: Grid columns verified: Order #, Product, Quantity, Status, Priority, Assigned To, Due Date, Created. All 8 expected columns present (plus select checkbox column).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC058",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC058: Default page shows exactly 10 rows. Pagination shows 'Showing 1-10 of N'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC059",
+    "status": "PASS",
+    "duration_ms": 1000,
+    "notes": "S2G3-TC059: Pagination info text shows 'Showing 1-10 of 22' format correctly.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC060",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC060: Clicked Next page, page 2 loaded with 9 rows (rows 11-19 of 19 at time of test).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC061",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC061: Navigated to page 2, then clicked Previous page. Returned to page 1 with 10 rows.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC062",
+    "status": "PASS",
+    "duration_ms": 28000,
+    "notes": "S2G3-TC062: Created 'Test Line' production line (location=Hall E, capacity=500, status=active) in Settings. Verified Test Line appears in New Order wizard Step 2 dropdown. Created order ORD-024 using Test Line. Order detail confirms production line 'Test Line'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC063",
+    "status": "PASS",
+    "duration_ms": 4000,
+    "notes": "S2G3-TC063: Navigated to last page (page 3). Showed 'Showing 21-23 of 23' with 3 rows - correct partial page count.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC064",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC064: Clicked Order # header, verified ascending sort: ORD-001, ORD-002, ORD-003, ORD-004, ORD-005.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC065",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC065: Clicked Order # header again, verified descending sort: ORD-026, ORD-025, ORD-024, ORD-023, ORD-022.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC066",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC066: Sorted by Due Date ascending. First dates: 3/5/2026, 3/6/2026, 3/12/2026. Verified chronological order.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC067",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC067: Sorted by Due Date descending. First dates: 5/1/2026, 5/1/2026, 4/25/2026. Verified reverse chronological order.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC068",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC068: Sorted by Priority. First items: Critical, Critical, High, High, High. Verified priority ordering.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC069",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S2G3-TC069: Sorted by Status. First items: Approved x6, Completed x4. Verified alphabetical status ordering.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC070",
+    "status": "FAIL",
+    "duration_ms": 12000,
+    "notes": "S2G3-TC070: Deleted 'Test Widget' product from Settings. Navigated to ORD-021 (which used Test Widget). Order shows 'Order not found - The order you're looking for doesn't exist or has been deleted.' Expected order to still display correctly after product deletion, but order was cascade-deleted or corrupted.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC071",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC071: Filtered by Draft status. Showed 2 Draft orders only. All visible statuses are 'Draft'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC072",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC072: Filtered by In Production status. Showed 3 In Production orders only. All visible statuses are 'In Production'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC073",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC073: Filtered by Completed status. Showed 5 Completed orders only. All visible statuses are 'Completed'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC074",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC074: Filtered by Submitted status. Showed 4 Submitted orders only. All visible statuses are 'Submitted'.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC075",
+    "status": "PASS",
+    "duration_ms": 2000,
+    "notes": "S2G3-TC075: Cleared filter (All Statuses). Total orders restored to 24. All orders visible across pages.",
+    "attempts": 1,
+    "retries": []
+  }
+]

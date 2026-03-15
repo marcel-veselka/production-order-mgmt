@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC151",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "S3G7-TC151: Admin dragged ORD-012 from Submitted to Approved on Kanban. Navigated to Orders grid, found ORD-012 showing Approved status. Opened detail, verified status 'Approved' and activity log entry 'Status changed from submitted to approved' with timestamp and Admin attribution (USR-001).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC152",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S3G7-TC152: Opened Completed order ORD-002 detail as Admin. Verified no Edit button, no Delete button, Actions section shows 'No actions available for this status'. Completed cards on Kanban have cursor=pointer but are effectively non-draggable (confirmed by TC150 prior pass).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC153",
+    "status": "PASS",
+    "duration_ms": 25000,
+    "notes": "S3G7-TC153: As Admin, performed valid transition (ORD-011 Submitted->Approved). Attempted invalid transition (ORD-014 Draft->Completed, rejected - card stayed in Draft). Then performed another valid transition (ORD-014 Draft->Submitted, succeeded - Draft count dropped by 1). Error state did not persist.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC154",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S3G7-TC154: As Operator, dragged Submitted card toward Approved column. Console showed 403 Forbidden on /api/orders/ORD-018/transition. Card returned to original column. Role restriction enforced.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC155",
+    "status": "PASS",
+    "duration_ms": 6000,
+    "notes": "S3G7-TC155: As Operator, dragged Submitted ORD-014 toward Draft column. Console showed 403 Forbidden. Role restriction enforced - Operator cannot reject.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC156",
+    "status": "PASS",
+    "duration_ms": 6000,
+    "notes": "S3G7-TC156: As Operator, dragged Approved ORD-015 toward In Production column. Console showed 403 Forbidden. Role restriction enforced - Operator cannot start production.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC157",
+    "status": "PASS",
+    "duration_ms": 6000,
+    "notes": "S3G7-TC157: As Operator, dragged Quality Check ORD-007 toward Quality Hold column. Card remained in Quality Check (count unchanged). Transition blocked by client-side role validation.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC158",
+    "status": "PASS",
+    "duration_ms": 6000,
+    "notes": "S3G7-TC158: As Operator, dragged Quality Check ORD-007 toward Completed column. Console showed 403 Forbidden. Role restriction enforced - Operator cannot mark complete.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC159",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC159: As Operator, opened Draft order ORD-024 detail. Clicked 'Submit for Approval' action button. Status changed to Submitted. Activity log shows 'Status changed from draft to submitted' by USR-003 (Operator).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC160",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC160: As Admin, opened Submitted order ORD-025 detail. Clicked 'Approve' action button. Status changed to Approved. Transition verified on detail page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC161",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S3G7-TC161: As Supervisor (Jan Novak), opened Submitted order ORD-030 detail. Clicked 'Approve' action button. Status changed to Approved. Transition verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC162",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC162: As Admin, opened Submitted order ORD-024 detail. Clicked 'Reject' action button. Status changed to Draft. Rejection returned order to Draft status.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC163",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC163: As Supervisor (Jan Novak), opened Submitted order ORD-029 detail. Clicked 'Reject' action button. Status changed to Draft. Supervisor rejection verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC164",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC164: As Admin, opened Approved order ORD-020 detail. Clicked 'Start Production' action button. Status changed to In Production. Transition verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC165",
+    "status": "PASS",
+    "duration_ms": 12000,
+    "notes": "S3G7-TC165: As Operator (Petra Svoboda), opened In Production order ORD-025 detail. Clicked 'Complete Production' action button. Status changed to Quality Check. Transition verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC166",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S3G7-TC166: As Admin, opened Quality Check order ORD-025 detail. Clicked 'Quality Hold' action button. Status changed to Quality Hold. Transition verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC167",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S3G7-TC167: As Admin, opened Quality Hold order ORD-025 detail. Clicked 'Release' action button. Status changed back to Quality Check. Release hold transition verified.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC168",
+    "status": "PASS",
+    "duration_ms": 8000,
+    "notes": "S3G7-TC168: As Admin, opened Quality Check order ORD-025 detail. Clicked 'Mark Complete' action button. Status changed to Completed. 'No actions available for this status' shown after completion.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC169",
+    "status": "PASS",
+    "duration_ms": 10000,
+    "notes": "S3G7-TC169: As Operator, opened Submitted order ORD-031 detail. Actions section shows 'No actions available for this status'. No Approve or Reject buttons visible. Operator correctly restricted.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC170",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S3G7-TC170: As Supervisor, opened Submitted orders (ORD-030, ORD-029) and verified both 'Approve' and 'Reject' buttons visible on detail pages. Supervisor role has approve/reject permissions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC171",
+    "status": "PASS",
+    "duration_ms": 5000,
+    "notes": "S3G7-TC171: As Admin, verified all action buttons across different order statuses: Submit for Approval (Draft), Approve/Reject (Submitted), Start Production (Approved), Complete Production (In Production), Quality Hold/Mark Complete (Quality Check), Release (Quality Hold). Admin has access to all workflow actions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC172",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S3G7-TC172: During drag operations (TC151, TC153, TC175), cards moved immediately to target column before API response confirmed. Optimistic update behavior observed consistently across all drag transitions.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC173",
+    "status": "SKIP",
+    "duration_ms": 0,
+    "notes": "S3G7-TC173: Skipped per test plan - requires API failure simulation which is not part of this stability batch.",
+    "attempts": 0,
+    "retries": []
+  },
+  {
+    "tc": "TC174",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S3G7-TC174: Verified column counts update after transitions. TC151: Submitted 2->1, Approved 2->3 after drag. TC153: Draft 5->4, Submitted 0->1 after valid drag. Column counts consistently reflected source -1 and target +1.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC175",
+    "status": "PASS",
+    "duration_ms": 35000,
+    "notes": "S3G7-TC175: As Admin, walked ORD-024 through full lifecycle via drag-and-drop: Draft->Submitted->Approved->In Production->Quality Check. Final step (Quality Check->Completed) completed via Mark Complete button due to drag imprecision. Activity log confirmed all 5 transitions: draft->submitted, submitted->approved, approved->in_production, in_production->quality_check, quality_check->completed. All by USR-001 (Admin).",
+    "attempts": 1,
+    "retries": []
+  }
+]

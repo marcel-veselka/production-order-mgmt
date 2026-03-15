@@ -1,0 +1,225 @@
+[
+  {
+    "tc": "TC001",
+    "status": "PASS",
+    "duration_ms": 1633,
+    "notes": "B4G1-TC001: Admin login with admin@factory.local/admin123. Redirected to Dashboard. Heading shows Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC002",
+    "status": "PASS",
+    "duration_ms": 1631,
+    "notes": "B4G1-TC002: Supervisor login with jan.novak@factory.local/super123. Dashboard loaded successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC003",
+    "status": "PASS",
+    "duration_ms": 1638,
+    "notes": "B4G1-TC003: Operator login with petra.svoboda@factory.local/oper123. Dashboard loaded successfully.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC004",
+    "status": "PASS",
+    "duration_ms": 1619,
+    "notes": "B4G1-TC004: Login with nonexistent@factory.local shows error, stays on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC005",
+    "status": "PASS",
+    "duration_ms": 1614,
+    "notes": "B4G1-TC005: Login with valid email + wrong password shows error, stays on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC006",
+    "status": "PASS",
+    "duration_ms": 1122,
+    "notes": "B4G1-TC006: Empty email triggers validation, form stays on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC007",
+    "status": "PASS",
+    "duration_ms": 1117,
+    "notes": "B4G1-TC007: Empty password triggers validation, form stays on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC008",
+    "status": "PASS",
+    "duration_ms": 1118,
+    "notes": "B4G1-TC008: Both fields empty triggers validation errors on both fields.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC009",
+    "status": "PASS",
+    "duration_ms": 1943,
+    "notes": "B4G1-TC009: Admin demo button auto-fills admin@factory.local/admin123, login succeeds to Dashboard.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC010",
+    "status": "PASS",
+    "duration_ms": 1947,
+    "notes": "B4G1-TC010: Supervisor demo button auto-fills jan.novak credentials, login succeeds.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC011",
+    "status": "PASS",
+    "duration_ms": 1933,
+    "notes": "B4G1-TC011: Operator demo button auto-fills petra.svoboda credentials, login succeeds.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC012",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "B4G1-TC012: Token found in localStorage after login: VVNSLTAwMw==",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC013",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "B4G1-TC013: Token decodes to user ID: USR-003 (base64-encoded).",
+    "attempts": 2,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Buffer not defined in run-code context, used atob() instead"
+      }
+    ]
+  },
+  {
+    "tc": "TC014",
+    "status": "PASS",
+    "duration_ms": 1052,
+    "notes": "B4G1-TC014: Session persists after page refresh, Dashboard still shown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC015",
+    "status": "PASS",
+    "duration_ms": 1152,
+    "notes": "B4G1-TC015: New tab in same context shares session, Dashboard loads without re-login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC016",
+    "status": "PASS",
+    "duration_ms": 544,
+    "notes": "B4G1-TC016: Logout removes token from localStorage.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC017",
+    "status": "PASS",
+    "duration_ms": 2,
+    "notes": "B4G1-TC017: After logout, redirected to login page with Login button visible.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC018",
+    "status": "PASS",
+    "duration_ms": 574,
+    "notes": "B4G1-TC018: Without token, navigating to app redirects to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC019",
+    "status": "PASS",
+    "duration_ms": 1063,
+    "notes": "B4G1-TC019: Garbage token in localStorage redirects to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC020",
+    "status": "PASS",
+    "duration_ms": 1,
+    "notes": "B4G1-TC020: Admin sees Settings nav item (4 nav items total).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC021",
+    "status": "PASS",
+    "duration_ms": 1057,
+    "notes": "B4G1-TC021: Supervisor does not see Settings nav item (3 nav items).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC022",
+    "status": "PASS",
+    "duration_ms": 1058,
+    "notes": "B4G1-TC022: Operator does not see Settings nav item (3 nav items).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC023",
+    "status": "PASS",
+    "duration_ms": 10889,
+    "notes": "B4G1-TC023: Operator created order via full 3-step wizard. Submitted for approval from order detail. Verified card on Workflows page in Submitted column.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC024",
+    "status": "PASS",
+    "duration_ms": 8383,
+    "notes": "B4G1-TC024: Supervisor approved ORD-018 (Submitted->Approved) via detail page Approve button, then started production (Approved->In Production) via Start Production button. Both transitions succeeded with success notifications.",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Session lost after logout in run-code"
+      },
+      {
+        "attempt": 2,
+        "error": "No action buttons on Kanban cards - cards use drag-and-drop, buttons are on detail page"
+      }
+    ]
+  },
+  {
+    "tc": "TC025",
+    "status": "PASS",
+    "duration_ms": 9649,
+    "notes": "B4G1-TC025: Admin created ORD-020 via wizard, then walked through all statuses (Draft->Submitted->Approved->In Production->Quality Check->Completed) via detail page action buttons.",
+    "attempts": 3,
+    "retries": [
+      {
+        "attempt": 1,
+        "error": "Toast notification blocked navigation click"
+      },
+      {
+        "attempt": 2,
+        "error": "Login state check failed"
+      }
+    ]
+  }
+]

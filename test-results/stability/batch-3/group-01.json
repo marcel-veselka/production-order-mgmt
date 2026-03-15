@@ -1,0 +1,202 @@
+[
+  {
+    "tc": "TC001",
+    "status": "PASS",
+    "duration_ms": 5800,
+    "notes": "S3G1-TC001: Admin login with admin@factory.local/admin123. Redirected to Dashboard. All 4 nav items visible (Dashboard, Orders, Workflows, Settings). User shows 'Admin' with 'admin' role.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC002",
+    "status": "PASS",
+    "duration_ms": 5200,
+    "notes": "S3G1-TC002: Supervisor login with jan.novak@factory.local/super123. Dashboard loaded. Shows 'Jan Novak' with 'supervisor' role. 3 nav items (Dashboard, Orders, Workflows). Settings hidden.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC003",
+    "status": "PASS",
+    "duration_ms": 5100,
+    "notes": "S3G1-TC003: Operator login with petra.svoboda@factory.local/oper123. Dashboard loaded. Shows 'Petra Svoboda' with 'operator' role. 3 nav items, no Settings.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC004",
+    "status": "PASS",
+    "duration_ms": 3500,
+    "notes": "S3G1-TC004: Login with nonexistent@factory.local shows 'Login failed' alert. Remains on login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC005",
+    "status": "PASS",
+    "duration_ms": 3200,
+    "notes": "S3G1-TC005: Login with admin@factory.local and wrong password shows 'Login failed' alert.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC006",
+    "status": "PASS",
+    "duration_ms": 2200,
+    "notes": "S3G1-TC006: Empty email with filled password triggers 'Email is required' validation alert on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC007",
+    "status": "PASS",
+    "duration_ms": 2100,
+    "notes": "S3G1-TC007: Filled email with empty password triggers 'Password is required' validation alert on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC008",
+    "status": "PASS",
+    "duration_ms": 1800,
+    "notes": "S3G1-TC008: Both fields empty triggers 'Email is required' validation alert on submit.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC009",
+    "status": "PASS",
+    "duration_ms": 4800,
+    "notes": "S3G1-TC009: Admin demo button auto-fills admin@factory.local/admin123. Login succeeds, Dashboard loads with 'Logged in successfully' toast.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC010",
+    "status": "PASS",
+    "duration_ms": 4600,
+    "notes": "S3G1-TC010: Supervisor demo button auto-fills jan.novak@factory.local credentials. Login succeeds, Dashboard loads.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC011",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "S3G1-TC011: Operator demo button auto-fills petra.svoboda@factory.local credentials. Login succeeds, 'Petra Svoboda' with 'operator' role shown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC012",
+    "status": "PASS",
+    "duration_ms": 1200,
+    "notes": "S3G1-TC012: After Operator login, localStorage contains 'token' key with value 'VVNSLTAwMw==' (base64-encoded user ID).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC013",
+    "status": "PASS",
+    "duration_ms": 800,
+    "notes": "S3G1-TC013: Token 'VVNSLTAwMw==' decodes to 'USR-003' via atob(), confirming base64-encoded user ID for Operator.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC014",
+    "status": "PASS",
+    "duration_ms": 3800,
+    "notes": "S3G1-TC014: After page reload, session persists. Dashboard still displayed with 'Petra Svoboda' without redirect to login.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC015",
+    "status": "PASS",
+    "duration_ms": 4200,
+    "notes": "S3G1-TC015: New tab opened to localhost:3333. Session active — 'Petra Svoboda' shown, no login button. Session persists across tabs.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC016",
+    "status": "PASS",
+    "duration_ms": 2600,
+    "notes": "S3G1-TC016: After clicking Logout, localStorage token is null. Session destroyed.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC017",
+    "status": "PASS",
+    "duration_ms": 2400,
+    "notes": "S3G1-TC017: After logout, redirected to login page. Login button visible, no dashboard content.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC018",
+    "status": "PASS",
+    "duration_ms": 2800,
+    "notes": "S3G1-TC018: Removed token from localStorage, navigated to app. Redirected to login page with Login button shown.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC019",
+    "status": "PASS",
+    "duration_ms": 3000,
+    "notes": "S3G1-TC019: Set garbage token 'garbage_invalid_token' in localStorage, navigated to app. Redirected to login page.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC020",
+    "status": "PASS",
+    "duration_ms": 4200,
+    "notes": "S3G1-TC020: Admin login shows Settings link in sidebar navigation (Dashboard, Orders, Workflows, Settings — 4 items).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC021",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "S3G1-TC021: Supervisor login shows 3 nav items (Dashboard, Orders, Workflows). Settings link count = 0.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC022",
+    "status": "PASS",
+    "duration_ms": 4500,
+    "notes": "S3G1-TC022: Operator login shows 3 nav items (Dashboard, Orders, Workflows). Settings link count = 0.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC023",
+    "status": "PASS",
+    "duration_ms": 19500,
+    "notes": "S3G1-TC023: Operator created order ORD-025 via full 3-step wizard (Steel Bracket A, qty 200, High priority, Assembly Line Alpha, Morning shift). Submitted from detail page — status changed to Submitted. Card found in Submitted column on Workflows. Activity log shows creation and submission by USR-003 (Operator).",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC024",
+    "status": "PASS",
+    "duration_ms": 16200,
+    "notes": "S3G1-TC024: Supervisor approved ORD-025 (Submitted->Approved via Kanban card click). Then started production via detail page 'Start Production' button (Approved->In Production by USR-002). Activity log shows all transitions with correct user attribution. Both transitions succeeded.",
+    "attempts": 1,
+    "retries": []
+  },
+  {
+    "tc": "TC025",
+    "status": "PASS",
+    "duration_ms": 22000,
+    "notes": "S3G1-TC025: Admin created order ORD-028 via wizard (Copper Wire Harness, qty 150, Low priority, CNC Machining Center). Walked through all statuses via detail page action buttons: Draft->Submitted->Approved->In Production->Quality Check->Completed. Activity log shows 6 entries (creation + 5 transitions) all by USR-001 (Admin). Each transition showed correct status update. Final status: Completed with no available actions.",
+    "attempts": 1,
+    "retries": []
+  }
+]
